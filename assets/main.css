@@ -1,0 +1,9 @@
+:root {
+    --main-color: #dedede;
+}
+
+
+body {
+    background-color: var(--main-color);
+    /* background-color: #dede00; */
+}
