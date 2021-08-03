@@ -7,14 +7,97 @@
   box-sizing: border-box;
 }
 
-* + * {
-    margin: 1em 1em 0 0;
-}
-
 body {
     max-width: 95%;
     text-align: left;
 }
+.journey-txt {
+    text-align: left;
+    font-family: "Rancho";
+    font-size: 1rem;
+}
+
+/* Horizontale Line <hr> ein inline-element ist und
+ einen block-container braucht */
+.rule-container {
+    text-align: left;
+    width: 10rem;
+    border: rgb(70, 70, 70) solid 1px;
+    border-radius: 5px;
+}
+
+hr {
+    margin-bottom: 3rem;
+}
+
+img:hover {
+    transform:scale(1.5);
+    -ms-transform:scale(1.5); /* IE 9 */
+    -moz-transform:scale(1.5); /* Firefox */
+    -webkit-transform:scale(1.5); /* Safari and Chrome */
+    -o-transform:scale(1.5); /* Opera */
+}
+.jo-pics {
+    display: inline-block; /* change the default display type to inline-block */
+    overflow: hidden;      /* hide the overflow */
+    margin-bottom: 2px;
+    margin: 1rem 0 0 0;
+}
+
+.jo-map {
+    display: inline-block; /* change the default display type to inline-block */
+    overflow: hidden;      /* hide the overflow */
+    margin-bottom: 2px;
+    margin: 2rem 0 0 0;
+}
+
+.jo-pics img {
+    transition: all 0.2s ease;
+    vertical-align: middle;
+}
+
+.info-text {
+    text-align: left;
+    font-family: "Rancho";
+    font-size: 1rem;
+    color: #5B5555;
+
+}
+
+.info-title {
+    text-align: left;
+    font-family: "Rancho";
+    font-size: 13px;
+    color: #5B5555;
+}
+figcaption {
+    display: block;
+    color: #7e7676;
+    font-family: "Rancho";
+    padding: 2px;
+    text-align: left;
+
+}
+
+.first-p {
+    margin-top: 9rem;
+
+}
+
+.last-p {
+    margin-bottom: 9rem;
+}
+
+
+.jou-text {
+    text-align: left;
+    font-family: "Rancho";
+    font-size: 1rem;
+    color: #5B5555;
+    margin-top: 1rem;
+    margin-bottom: 0px;
+}
+
 
 .navbar{
     position: fixed;
@@ -201,12 +284,12 @@ h1 {
     font-style: normal;
     font-weight: normal;
     font-size: 1.9rem;
-    line-height: 75px;
     color: #7589F0;
 }
 
 .my-journey {
-    margin-top: 4rem;
+    margin-top: 2rem;
+    width: 306px;
 }
 
 .my-journey img{
