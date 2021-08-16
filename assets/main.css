@@ -22,7 +22,7 @@ body {
 .rule-container {
     text-align: left;
     width: 10rem;
-    border: rgb(70, 70, 70) solid 1px;
+    border: rgb(70, 70, 70) solid 1.9px;
     border-radius: 5px;
 }
 
@@ -67,7 +67,7 @@ img:hover {
 .info-title {
     text-align: left;
     font-family: "Rancho";
-    font-size: 13px;
+    font-size: 20px;
     color: #5B5555;
 }
 figcaption {
@@ -98,6 +98,79 @@ figcaption {
     margin-bottom: 0px;
 }
 
+
+
+.who {
+    font-family: "Ravi Prakash";
+    font-size: 1.5rem;
+    color: #5B5555;
+    text-align: left;
+}
+.txt-last {
+    text-align: left;
+    font-family: "Rancho";
+    font-size: 1rem;
+    color: #5B5555;
+    margin-bottom: 70px;
+}
+
+
+.skill_title {
+    font-family: "Ravi Prakash";
+    font-size: 1.5rem;
+    color: #5B5555;
+    text-align: left;
+    color: #5B5555;
+    padding-top: 1rem;
+}
+
+.ed {
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+}
+
+.skill {
+    text-align: left;
+    font-family: "Rancho";
+    font-size: 20px;
+    color: #5B5555;
+}
+.aussenbalkon {
+    background-color:#C4C4C4;
+    height: 0.4rem;
+}
+.innenbalkon {
+    background-color: #ED3281;
+    height: inherit;
+}
+
+h5 {
+    text-align: left;
+    font-size: 15px;
+    color: #5B5555;
+    margin-bottom: 1rem;
+}
+.h5_txt {
+    text-align: left;
+    font-size: 15px;
+    color: #5B5555;
+    margin-bottom: 2.5rem;
+}
+
+.linked-btn {
+    display: inline-block;
+    text-decoration: none;
+    /* border: #427b9c solid 15px; */
+    border: solid 20px #427b9c;
+    background-color: #427b9c;
+    color: white;
+    font-size: 24px;
+    font-weight: 8px;
+    width: 100%;
+    letter-spacing: 1.5px;
+    text-align: center;
+    cursor: pointer;
+ }
 
 .navbar{
     position: fixed;
