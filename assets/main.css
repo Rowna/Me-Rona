@@ -21,7 +21,7 @@ body {
  einen block-container braucht */
 .rule-container {
     text-align: left;
-    width: 10rem;
+    width: 90%;
     border: rgb(70, 70, 70) solid 1.9px;
     border-radius: 5px;
 }
@@ -56,13 +56,7 @@ img:hover {
     vertical-align: middle;
 }
 
-.info-text {
-    text-align: left;
-    font-family: "Rancho";
-    font-size: 1rem;
-    color: #5B5555;
 
-}
 
 .info-title {
     text-align: left;
@@ -352,12 +346,32 @@ a {
     text-align: center;
 }
 
+p {
+    
+    text-align: left;
+    font-family: 'Rancho';
+    font-size: 1.2rem;
+    font-weight: normal;
+    /* top-bottom left-right */
+    margin: 20px 0 3px;
+    color: #5B5555;
+
+}
+
 h1 {
+    font-family: 'Rancho';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #7589F0;
+}
+
+h2 {
     font-family: Rancho;
     font-style: normal;
     font-weight: normal;
-    font-size: 1.9rem;
-    color: #7589F0;
+    font-size: 1.5rem;
+    color: #6f79aa;
 }
 
 .my-journey {
@@ -368,6 +382,19 @@ h1 {
 .my-journey img{
     max-width: 306px;
 }
+
+.book-title, .game-title {
+    margin: 2rem 2rem 0 0;
+}
+
+.game-title {
+    margin-top: 3rem;
+}
+
+.level-2 {
+margin-top: 2rem;
+}
+
 /* 
 .container {
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/hg.jpg);
