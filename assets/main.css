@@ -30,6 +30,15 @@ hr {
     margin-bottom: 3rem;
 }
 
+.figcaption {
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    color: #7e7676;
+    font-family: 'Rancho';
+    text-align: left;
+    padding: 2px;
+}
 img:hover {
     transform:scale(1.5);
     -ms-transform:scale(1.5); /* IE 9 */
@@ -188,14 +197,14 @@ h5 {
     font-size: 1.5rem;
     color: #7589F0;
 }
-
+/*
 a {
     text-decoration: none;
     font-weight: bold;
     padding: 0.2rem 0;
     font-family: "Ravi Prakash";
 }
-
+*/
 .navbar-toggler {
     position: absolute;
     top: 50%;
@@ -494,10 +503,12 @@ margin-top: 2rem;
       transform: translate3d(0, 0, 0);
     }
 }
+/*
 a img {
     width: 2rem;
  
 }
+*/
 .logo {
     margin: 1rem;
 }
