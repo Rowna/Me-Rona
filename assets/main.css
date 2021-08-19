@@ -30,6 +30,20 @@ hr {
     margin-bottom: 3rem;
 }
 
+.creat-title {
+    color: #726e6e;
+    font-size: 17px;
+}
+/*
+.kreis {
+    background-color: #ED3281;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-radius: 16px solid #ED3281;
+
+}
+*/
 .figcaption {
     text-decoration: none;
     display: inline-block;
@@ -45,6 +59,11 @@ img:hover {
     -moz-transform:scale(1.5); /* Firefox */
     -webkit-transform:scale(1.5); /* Safari and Chrome */
     -o-transform:scale(1.5); /* Opera */
+}
+
+.me-pic {
+    filter: drop-shadow(0px 10px 10px rgba(10, 10, 10, 0.5));
+    border-radius: 8px;
 }
 .jo-pics {
     display: inline-block; /* change the default display type to inline-block */
@@ -125,6 +144,7 @@ figcaption {
     text-align: left;
     color: #5B5555;
     padding-top: 1rem;
+    font-weight: bold;
 }
 
 .ed {
@@ -134,7 +154,8 @@ figcaption {
 
 .skill {
     text-align: left;
-    font-family: "Rancho";
+    font-weight: normal;
+    font-family: 'Rancho';
     font-size: 20px;
     color: #5B5555;
 }
@@ -149,13 +170,13 @@ figcaption {
 
 h5 {
     text-align: left;
-    font-size: 15px;
+    font-size: 17px;
     color: #5B5555;
     margin-bottom: 1rem;
 }
 .h5_txt {
     text-align: left;
-    font-size: 15px;
+    font-size: 18px;
     color: #5B5555;
     margin-bottom: 2.5rem;
 }
@@ -356,7 +377,6 @@ a {
 }
 
 p {
-    
     text-align: left;
     font-family: 'Rancho';
     font-size: 1.2rem;
@@ -370,7 +390,7 @@ p {
 h1 {
     font-family: 'Rancho';
     font-style: normal;
-    font-weight: bold;
+ /* font-weight: bold; */
     font-size: 2.5rem;
     color: #7589F0;
 }
