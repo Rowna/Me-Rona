@@ -21,6 +21,21 @@ main {
     --background: rgba(241, 237, 241, 0.85);
 }
 
+
+.logo-container {
+    display: none;
+}
+
+img:hover {
+    opacity: .7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.25s ease-in-out;
+}
 .bck {
     height: 650px;
     margin: 0;
@@ -28,7 +43,7 @@ main {
     padding-top: 5.9rem;
 
 }
-.navbar-brand {
+.navbar-brand a {
     text-decoration: none;
     display: inline-block;
     margin-left: 8.5rem;
@@ -144,8 +159,75 @@ das direkt auf einen "checked" .nav-toggle folgt. */
     top: 7px;
 }
 
+@media screen and (min-width: 800px) {
+    .nav-toggle-label {
+        display: none;
+    }
+    .logo-container {
+        display: table-column;
+        grid-column: 1 / 2;
+        width: 20%;
+        margin-left: 9.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+    }
+    .navbar-brand a {
+        grid-column: 2 / 3;
+        margin-left: 0;
+    }
+    nav {
+        position: relative;
+        text-align: left;
+        transition: none;
+        transform: scale(1,1);
+        background: none;
+        top: initial;
+        left: initial;
 
-
+        grid-column: 3 / 5;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav ul {
+        display: flex;
+        margin-right: 1.5em;
+        margin-bottom: 0.2em;
+        margin-top: 0;
+    }
+    nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background: black;
+        position: absolute;
+        top: -.75em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+      }
+      
+      nav a:hover::before {
+        transform: scale(1,1);
+      }
+    
+}
 .journey-txt {
     text-align: left;
     font-family: "Rancho";
@@ -188,36 +270,38 @@ hr {
     text-align: left;
     padding: 2px;
 }
+/*  
 img:hover {
     transform:scale(1.5);
-    -ms-transform:scale(1.5); /* IE 9 */
-    -moz-transform:scale(1.5); /* Firefox */
-    -webkit-transform:scale(1.5); /* Safari and Chrome */
-    -o-transform:scale(1.5); /* Opera */
+    -ms-transform:scale(1.5); /* IE 9 
+    -moz-transform:scale(1.5); /* Firefox 
+    -webkit-transform:scale(1.5); /* Safari and Chrome 
+    -o-transform:scale(1.5); /* Opera 
 }
-
 .me-pic {
     filter: drop-shadow(0px 10px 10px rgba(10, 10, 10, 0.5));
     border-radius: 8px;
 }
+
+
 .jo-pics {
-    display: inline-block; /* change the default display type to inline-block */
-    overflow: hidden;      /* hide the overflow */
+    display: inline-block; /* change the default display type to inline-block 
+    overflow: hidden;      /* hide the overflow 
     margin-bottom: 2px;
     margin: 1rem 0 0 0;
 }
-
 .jo-map {
-    display: inline-block; /* change the default display type to inline-block */
-    overflow: hidden;      /* hide the overflow */
+    display: inline-block; /* change the default display type to inline-block 
+    overflow: hidden;      /* hide the overflow 
     margin-bottom: 2px;
     margin: 2rem 0 0 0;
 }
-
 .jo-pics img {
     transition: all 0.2s ease;
     vertical-align: middle;
 }
+
+*/
 
 
 
@@ -652,9 +736,6 @@ a img {
  
 }
 */
-.logo {
-    margin: 1rem;
-}
 
 /*
 .untere-div {
