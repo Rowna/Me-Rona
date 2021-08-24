@@ -158,42 +158,39 @@ das direkt auf einen "checked" .nav-toggle folgt. */
 .nav-toggle-label::after {
     top: 7px;
 }
-
-@media screen and (min-width: 800px) {
+/* @media (min-width:641px) { / portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones / } */
+@media screen and (min-width: 1025px) {
     .nav-toggle-label {
         display: none;
     }
-    .logo-container {
-        display: table-column;
-        grid-column: 1 / 2;
-        width: 20%;
-        margin-left: 9.5rem;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding: 0;
+    main {
+        margin: 0 4rem;
     }
-    
     header {
-        display: grid;
-        grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+        display: flex;
+        background: #9c4298;
+    }
+    .navbar-brand {
+        background: #ccb186;
+        width: 30%;
+        margin-left: 4rem;
+    }
+    .navbar-brand {
+        max-width: 1100px;
     }
     .navbar-brand a {
-        grid-column: 2 / 3;
         margin-left: 0;
     }
     nav {
+        margin-right: 4rem;
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        background: #97c8b5;
         position: relative;
-        text-align: left;
+        align-items: center;
         transition: none;
         transform: scale(1,1);
-        background: none;
-        top: initial;
-        left: initial;
-
-        grid-column: 3 / 5;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
     }
     nav ul {
         display: flex;
@@ -210,6 +207,7 @@ das direkt auf einen "checked" .nav-toggle folgt. */
         opacity: 1;
         position: relative;
     }
+    /*
     nav a::before {
         content: '';
         display: block;
@@ -221,46 +219,38 @@ das direkt auf einen "checked" .nav-toggle folgt. */
         right: 0;
         transform: scale(0, 1);
         transition: transform ease-in-out 250ms;
-      }
-      
-      nav a:hover::before {
-        transform: scale(1,1);
-      }
+    }
     
+    nav a:hover::before {
+        transform: scale(1,1);
+    }
+    */    
 }
+
 .journey-txt {
     text-align: left;
     font-family: "Rancho";
     font-size: 1rem;
 }
 
+
 /* Horizontale Line <hr> ein inline-element ist und
  einen block-container braucht */
-.rule-container {
-    text-align: left;
-    width: 90%;
-    border: rgb(70, 70, 70) solid 1.9px;
-    border-radius: 5px;
-}
-
-hr {
-    margin-bottom: 3rem;
-}
-
+ .rule-container {
+     text-align: left;
+     width: 90%;
+     border: rgb(70, 70, 70) solid 1.9px;
+     border-radius: 5px;
+    }
+    
+    hr {
+        margin-bottom: 3rem;
+    }
+    
 .creat-title {
     color: #726e6e;
     font-size: 17px;
 }
-/*
-.kreis {
-    background-color: #ED3281;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border-radius: 16px solid #ED3281;
-
-}
-*/
 .figcaption {
     text-decoration: none;
     display: inline-block;
@@ -787,4 +777,13 @@ section {
     color: #000000;
 }
 
-*/
+
+
+@media (min-width:320px) { / smartphones, iPhone, portrait 480x320 phones / }
+@media (min-width:481px) { / portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. / }
+@media (min-width:641px) { / portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones / }
+@media (min-width:961px) { / tablet, landscape iPad, lo-res laptops ands desktops / }
+@media (min-width:1025px) { / big landscape tablets, laptops, and desktops / }
+@media (min-width:1281px) { / hi-res laptops and desktops  }
+
+*/ 
