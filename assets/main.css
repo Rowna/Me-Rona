@@ -13,7 +13,7 @@ body {
 }
 
 main {
-/*    margin: 1.5rem; */
+    /*    margin: 1.5rem; */
     max-width: 100%;
 }
 /* Eine Variale, die diese Definition als Background nimmt*/
@@ -166,6 +166,14 @@ das direkt auf einen "checked" .nav-toggle folgt. */
     main {
         margin: 0 4rem;
     }
+
+    /* .main-pic-desktop {
+        display: block;
+    } */
+    .main-pic-mobile {
+        display: none;
+    }
+
     header {
         display: flex;
         background: #9c4298;
@@ -225,7 +233,33 @@ das direkt auf einen "checked" .nav-toggle folgt. */
         transform: scale(1,1);
     }
     */    
+
+    footer {
+        display: flex;
+        position: absolute;
+        bottom: 30;
+        background-color: #9c4298;
+        justify-content: flex-end;
+        width: 100%;
+    }
+    footer ul {
+        display: flex;
+        margin-right: 1.5em;
+        margin-bottom: 0.2em;
+        margin-top: 0;
+    }
+    footer li {
+        margin-left: 3em;
+        margin-bottom: 0;
+        margin-top: 0;
+
+    }
+    footer a {
+        opacity: 1;
+    }
 }
+
+
 
 .journey-txt {
     text-align: left;
