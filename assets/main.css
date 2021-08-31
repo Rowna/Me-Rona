@@ -15,11 +15,13 @@ body {
 main {
 /*    margin: 1.5rem; */
     max-width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 /* Eine Variale, die diese Definition als Background nimmt*/
 :root {
     --background: rgba(241, 237, 241, 0.85);
-    --base-padding: 4rem;
+    --base-padding: 20rem;
 }
 img:hover {
     opacity: .7;
@@ -32,23 +34,21 @@ img {
 }
 .navbar-brand a {
     text-decoration: none;
-    letter-spacing: 1.1px;
-    font-size: 2.3rem;
+    letter-spacing: 1px;
+    font-size: 2.2rem;
     color: #5e76eb;
     font-family: 'Rancho';
-    padding-right: .5em;
 }
 header {
     display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
     justify-content: flex-end;
     position: fixed;
     width: 100%;
     background: var(--background);
     z-index: 999;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 0 2rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
     top: 0;
     left: 0;
 }
@@ -74,7 +74,7 @@ nav li {
 }
 
 nav a {
-    color: #7589F0;
+    color: #5e76eb;
     font-weight: bold;
     font-family: 'Rancho';
     letter-spacing: 2px;
@@ -105,13 +105,13 @@ das direkt auf einen "checked" .nav-toggle folgt. */
     display: none;
 }
 .nav-toggle-label {
+    display: flex;
     position: absolute;
+    height: 50%;
+    align-items: center;
+    padding-left: 1.8em;
     top: 1.3rem;
     left: 0;
-    margin-left: 1.2em;
-    height: 50%;
-    display: flex;
-    align-items: center;
 }
 
 .nav-toggle-label span, 
@@ -136,6 +136,44 @@ das direkt auf einen "checked" .nav-toggle folgt. */
 .nav-toggle-label::after {
     top: 7px;
 }
+p {
+    text-align: left;
+    font-family: 'Rancho';
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: #5B5555;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h1 {
+    font-family: 'Rancho';
+    font-style: normal;
+    font-size: 2.2rem;
+    color: #7589F0;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h2 {
+    font-family: 'Rancho';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    color: #6f79aa;
+    margin-left: 20px;
+    margin-right: 20px;
+    /*
+    margin-top: 7rem;
+    */
+}
+.hero-content {
+    width: 100%;
+    padding-top: 5rem;
+    /* Diese sind unnötig
+    margin-top: 4.5rem;
+    */
+}
 
 /* Main-pic für desktop-version wird nicht angezeigt */
 .main-pic-desktop {
@@ -159,7 +197,10 @@ footer {
     background-color: var(--background);
     justify-content: space-between;
     width: 100%;
-    padding-left: 20px;
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
 }
 .footer-brand {
     display: block;
@@ -179,7 +220,6 @@ footer ul {
     margin-bottom: 0.2em;
     margin-top: 0.3em;
     list-style: none;
-    padding-right: 1rem;
 }
 footer li {
     margin: 3px;
@@ -189,8 +229,11 @@ footer img {
     display: inline-block;
     width: 1rem;
     vertical-align: text-bottom;    
-}
 
+}
+.footer-brand_a {
+    display: none;
+}
 /* @media (min-width:641px) { / portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones / } */
 @media screen and (min-width: 1025px) {
     .nav-toggle-label {
@@ -198,20 +241,27 @@ footer img {
     }
     header {
         display: flex;
-        background: #CFDBE3;
+        background: #D1DDE6;
     }
     .navbar-brand {
-        background: #aacbe0;
-        width: 30%;
+        background: #D1DDE6;
+        width: 50%;
         padding-left: var(--base-padding);
+        /*
         max-width: 1100px;
+        */
+    }
+    .navbar-brand a {
+        color: #000000;
     }
     nav {
+        /* Diese Eigenschaft ist unnötig
         padding-right: var(--base-padding);
+        */
         display: flex;
         flex-grow: 1;
         justify-content: flex-end;
-        background: #97c8b5;
+        background: #D1DDE6;
         position: relative;
         align-items: center;
         transition: none;
@@ -219,7 +269,7 @@ footer img {
     }
     nav ul {
         display: flex;
-        margin-right: 1.5em;
+        margin-right: var(--base-padding);
         margin-bottom: 0.2em;
         margin-top: 0;
     }
@@ -231,6 +281,7 @@ footer img {
     nav a {
         opacity: 1;
         position: relative;
+        color: #000000;
     }
     /*
     nav a::before {
@@ -258,26 +309,33 @@ footer img {
         width: 100%;
         height: 100vh;
         padding-left: var(--base-padding);
-        padding-right: 2rem;
+        padding-right: var(--base-padding);
     }
 
     .hero-content {
-        width: 50%;
-        margin-top: var(--base-padding);
-        padding-top: var(--base-padding);
+        width: 60%;
+        padding-top: 7rem;
+        /* Diese sind unnötig
+        margin-top: 4.5rem;
+        */
     }
     
     .hero-content h1,
     .hero-content h2,
     .hero-content p {
-        color: white;
+        color: rgb(246, 249, 253);
     }
     .hero-content h2 {
-        font-size: 1.2rem;
+        width: auto;
+        font-size: 1.5rem;
+    }
+    .hero-content h1 {
+        font-size: 3.7rem;
     }
 
     .hero-content p {
-        font-size: 1.4em;
+        width: 95%;
+        font-size: 1.5em;
     }
 
     /*
@@ -290,49 +348,51 @@ footer img {
         width: 100%;
         height: 100%;
     }
-    
-    .main-pic-desktop img {
-        width: 100%;
-    }
     */
-    .creat-title {
-        display: block;
-        margin: 20px;
-    }
     .main-pic-mobile {
         display: none;
     }
     footer {
         display: flex;
+        justify-content: space-between;
         position: absolute;
-        bottom: 30;
         background-color: #9c4298;
-        justify-content: flex-end;
         width: 100%;
         padding-right: var(--base-padding);
+        padding-left: 0;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
     }
-    footer ul {
+    .footer-brand {
+        display: none;
+    }
+    .footer-brand_a {
         display: flex;
+        width: 50%;
+        padding-left: var(--base-padding);
+    }
+    .footer-brand_a a {
+        opacity: 1;
+        color: #353847;
+        font-family: 'Ravi';
+        text-decoration: none;
+        font-size: 1.2rem;
+        margin: 0;
+    } 
+    footer ul {
         margin-right: 1.5em;
         margin-bottom: 0.2em;
         margin-top: 0;
     }
     footer li {
+        display: flex;
         margin-left: 1em;
         margin-bottom: 0;
         margin-top: 0.5rem;
         /* width: 5rem; */
-
+        
     }
-    footer a {
-        opacity: 1;
-        color: #7589F0;
-        font-family: 'Rancho';
-        letter-spacing: 1px;
-        text-decoration: none;
-        font-size: 1.5rem;
-    }
-
+    
     footer img {
         display: inline-block;
         width: 1.8rem;
@@ -369,11 +429,6 @@ footer img {
     hr {
         margin-bottom: 3rem;
     }
-    
-.creat-title {
-    color: #726e6e;
-    font-size: 17px;
-}
 
 .jo.pics img {
     width: auto;
@@ -421,7 +476,10 @@ img:hover {
 }
 
 */
-
+.info-text {
+    width: 90%;
+    font-size: 1rem;
+}
 
 
 .info-title {
@@ -458,17 +516,16 @@ figcaption {
     margin-bottom: 0px;
 }
 
-
-
 .who {
-    font-family: "Ravi Prakash";
+    font-family: 'Ravi Prakash';
     font-size: 1.5rem;
+    width: 80%;
     color: #5B5555;
     text-align: left;
 }
 .txt-last {
     text-align: left;
-    font-family: "Rancho";
+    font-family: 'Rancho';
     font-size: 1rem;
     color: #5B5555;
     margin-bottom: 70px;
@@ -498,6 +555,9 @@ figcaption {
     color: #5B5555;
 }
 .aussenbalkon {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 90%;
     background-color:#C4C4C4;
     height: 0.4rem;
 }
@@ -508,9 +568,11 @@ figcaption {
 
 h5 {
     text-align: left;
-    font-size: 17px;
+    font-size: 1rem;
     color: #5B5555;
     margin-bottom: 1rem;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .h5_txt {
     text-align: left;
@@ -698,38 +760,6 @@ a {
     text-align: center;
 }
 
-p {
-    text-align: left;
-    font-family: 'Rancho';
-    font-size: 1.2rem;
-    font-weight: normal;
-    color: #5B5555;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-h1 {
-    font-family: 'Rancho';
-    font-style: normal;
- /* font-weight: bold; */
-    font-size: 2.5rem;
-    color: #7589F0;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-h2 {
-    font-family: Rancho;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.5rem;
-    color: #6f79aa;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 7rem;
-
-}
-
 .my-journey {
     margin-top: 2rem;
     width: 306px;
@@ -906,8 +936,6 @@ section {
     background: #868686;
     color: #000000;
 }
-
-
 
 @media (min-width:320px) { / smartphones, iPhone, portrait 480x320 phones / }
 @media (min-width:481px) { / portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. / }
