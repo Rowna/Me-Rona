@@ -13,10 +13,12 @@ body {
 }
 
 main {
-/*    margin: 1.5rem; */
     max-width: 100%;
     padding-right: 1rem;
     padding-left: 1rem;
+    /* To center the main */
+    display: flex;
+    justify-content: center;
 }
 /* Eine Variale, die diese Definition als Background nimmt*/
 :root {
@@ -109,7 +111,7 @@ das direkt auf einen "checked" .nav-toggle folgt. */
     position: absolute;
     height: 50%;
     align-items: center;
-    padding-left: 1.8em;
+    padding-left: 34px;
     top: 1.3rem;
     left: 0;
 }
@@ -142,8 +144,10 @@ p {
     font-size: 1.1rem;
     font-weight: normal;
     color: #5B5555;
+    /*
     margin-left: 20px;
     margin-right: 20px;
+    */
 }
 
 h1 {
@@ -151,8 +155,10 @@ h1 {
     font-style: normal;
     font-size: 2.2rem;
     color: #7589F0;
+    /*
     margin-left: 20px;
     margin-right: 20px;
+    */
 }
 
 h2 {
@@ -161,15 +167,17 @@ h2 {
     font-weight: normal;
     font-size: 1.5rem;
     color: #6f79aa;
+    /*
     margin-left: 20px;
     margin-right: 20px;
-    /*
     margin-top: 7rem;
     */
 }
 .hero-content {
     width: 100%;
     padding-top: 5rem;
+    padding-left: 20px;
+    padding-right: 20px;
     /* Diese sind unnötig
     margin-top: 4.5rem;
     */
@@ -421,7 +429,8 @@ footer img {
  einen block-container braucht */
  .rule-container {
      text-align: left;
-     width: 90%;
+     width: 100%;
+     max-width: 600px;
      border: rgb(70, 70, 70) solid 1.9px;
      border-radius: 5px;
     }
@@ -430,11 +439,6 @@ footer img {
         margin-bottom: 3rem;
     }
 
-.jo.pics img {
-    width: auto;
-    border-radius: 20px solid;
-    margin-bottom: 5px;
-}
 .figcaption {
     text-decoration: none;
     display: inline-block;
@@ -443,6 +447,14 @@ footer img {
     font-family: 'Rancho';
     text-align: left;
     padding: 2px;
+}
+
+figcaption {
+    display: block;
+    color: #7e7676;
+    font-family: "Rancho";
+    padding: 2px;
+    text-align: left;
 }
 /*  
 img:hover {
@@ -476,45 +488,7 @@ img:hover {
 }
 
 */
-.info-text {
-    width: 90%;
-    font-size: 1rem;
-}
 
-
-.info-title {
-    text-align: left;
-    font-family: "Rancho";
-    font-size: 20px;
-    color: #5B5555;
-}
-figcaption {
-    display: block;
-    color: #7e7676;
-    font-family: "Rancho";
-    padding: 2px;
-    text-align: left;
-
-}
-
-.first-p {
-    margin-top: 9rem;
-
-}
-
-.last-p {
-    margin-bottom: 9rem;
-}
-
-
-.jou-text {
-    text-align: left;
-    font-family: "Rancho";
-    font-size: 1rem;
-    color: #5B5555;
-    margin-top: 1rem;
-    margin-bottom: 0px;
-}
 
 .who {
     font-family: 'Ravi Prakash';
@@ -761,13 +735,22 @@ a {
 }
 
 .my-journey {
-    margin-top: 2rem;
-    width: 306px;
+    /* margin-top: 2rem; */
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.my-journey img{
-    max-width: 306px;
+.jo-pics, .jo-map {
+    margin-left: 0;
+    margin-right: auto;
+    max-width: 600px;
 }
+.jo-pics figure {
+    margin-right: 0;
+    margin-left: 0;
+}
+
 
 .book-title, .game-title {
     margin: 2rem 2rem 0 0;
