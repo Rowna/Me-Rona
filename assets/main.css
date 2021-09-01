@@ -311,6 +311,10 @@ footer img {
     */   
     /* Mainbild für Desktop Version */
     .main-body {
+
+    }
+    
+    .hero-content {
         background-image: url("../images/eutin.jpg");
         background-size: cover;
         background-repeat: no-repeat;
@@ -318,10 +322,6 @@ footer img {
         height: 100vh;
         padding-left: var(--base-padding);
         padding-right: var(--base-padding);
-    }
-
-    .hero-content {
-        width: 60%;
         padding-top: 7rem;
         /* Diese sind unnötig
         margin-top: 4.5rem;
@@ -357,6 +357,18 @@ footer img {
         height: 100%;
     }
     */
+    /* My Journey Section in Desktop-Version */
+    .container {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .container h1 {
+        
+    }
+
+
+
     .main-pic-mobile {
         display: none;
     }
@@ -545,8 +557,6 @@ h5 {
     font-size: 1rem;
     color: #5B5555;
     margin-bottom: 1rem;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 .h5_txt {
     text-align: left;
@@ -734,7 +744,7 @@ a {
     text-align: center;
 }
 
-.my-journey {
+.container {
     /* margin-top: 2rem; */
     width: auto;
     padding-left: 20px;
