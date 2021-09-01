@@ -16,9 +16,10 @@ main {
     max-width: 100%;
     padding-right: 1rem;
     padding-left: 1rem;
-    /* To center the main */
+    /* To center the main 
     display: flex;
     justify-content: center;
+    */
 }
 /* Eine Variale, die diese Definition als Background nimmt*/
 :root {
@@ -310,10 +311,6 @@ footer img {
     }
     */   
     /* Mainbild für Desktop Version */
-    .main-body {
-
-    }
-    
     .hero-content {
         background-image: url("../images/eutin.jpg");
         background-size: cover;
@@ -363,15 +360,27 @@ footer img {
         justify-content: space-around;
         flex-direction: row;
     }
-    .container h1 {
-        
-    }
-
-
-
     .main-pic-mobile {
         display: none;
     }
+    /* Inhalt von my-journey Section */
+    .jo-pics {
+        display: flexbox;       /* Flex-Container */
+        justify-content: space-between;
+        flex-wrap: wrap;
+    
+        overflow: hidden;      /* hide the overflow */
+        margin-bottom: 2px;
+        margin: 1rem 0 0 0;
+    }
+    
+    .jo-pics figure {
+        width: 30%;
+    }
+
+
+
+
     footer {
         display: flex;
         justify-content: space-between;
@@ -483,11 +492,20 @@ img:hover {
 
 
 .jo-pics {
-    display: inline-block; /* change the default display type to inline-block 
+    display: flexbox       /* Flex-Container
+    justify-content: space-between;
+    flex-wrap: wrap;
+
     overflow: hidden;      /* hide the overflow 
     margin-bottom: 2px;
     margin: 1rem 0 0 0;
 }
+
+.jo-pics figure {
+    width: 30%;
+}
+
+
 .jo-map {
     display: inline-block; /* change the default display type to inline-block 
     overflow: hidden;      /* hide the overflow 
@@ -744,17 +762,31 @@ a {
     text-align: center;
 }
 
+/* margin-top: 2rem; 
 .container {
-    /* margin-top: 2rem; */
     width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+} 
+*/
+.hero-journey__content {
     padding-left: 20px;
     padding-right: 20px;
 }
 
-.jo-pics, .jo-map {
-    margin-left: 0;
-    margin-right: auto;
+.jo-pics {
+    padding-left: 20px;
+    padding-right: 20px;
     max-width: 600px;
+}
+ .journey__last-part > p {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 600px;
+}
+.jo-map {
+    margin: 0;
+    padding: 0 20px;
 }
 .jo-pics figure {
     margin-right: 0;
