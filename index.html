@@ -8,19 +8,31 @@
     <title>Me-Rona</title>
 </head>
 <body>
-    <div class="nav">Logo + Navigation</div>
-    <div class="hero">
-        <div class="hero--text">
-            <h1>It's me!</h1>
-            <h2>Rowan "Rona" Kharnoub</h2>
-        </div>
-        <div class="hero-img">
-            <!-- Hintergrundbild: richtig gutes Portrait von dir! -->
-        </div>
-    </div>
+    <header>
+        <!-- 
+            hier kommt alles rein, was wir als Navbar festgelegt haben. als 11ty-template.
+            Die Navbar wird einheitlich fuer alle einzelnen Webseiten von 11ty hineingeladen werden.
+        -->
+    </header>
     <div class="main">
-        <h1>Das Wichtigste</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, recusandae cum. Recusandae.</p>
+        <section class="hero">
+            <!-- hier ist das hintergrundbild, und nur hier! -->
+            <!-- hier kommt alles rein, was bei'my-journey__proto' in <main> steht -->
+        </section>
+
+        <section class="my-journey">
+            <!-- hier kommt alles rein, was bei 'my-journey__proto' in <main> steht -->
+        </section>
+
+        <section class="my-achievements">
+            <!-- hier kommt alles rein, was bei 'my-journey__achievements' in <main> steht -->
+        </section>
     </div>
+    <footer>
+        <!-- 
+            hier kommt alles rein, was wir als <footer> festgelegt haben. als 11ty-template. 
+            Der Footer wird einheitlich fuer alle einzelnen Webseiten von 11ty hineingeladen werden.
+        -->
+    </footer>
 </body>
 </html>
