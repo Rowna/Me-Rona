@@ -245,6 +245,10 @@ footer img {
 }
 /* @media (min-width:641px) { / portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones / } */
 @media screen and (min-width: 1025px) {
+    main {
+        max-width: 600px;
+    }
+
     .nav-toggle-label {
         display: none;
     }
@@ -310,6 +314,10 @@ footer img {
         transform: scale(1,1);
     }
     */   
+    .rule-container {
+        display: none;
+    }
+
     /* Mainbild für Desktop Version */
     .hero-content {
         background-image: url("../images/eutin.jpg");
@@ -365,19 +373,21 @@ footer img {
     }
     /* Inhalt von my-journey Section */
     .jo-pics {
-        display: flexbox;       /* Flex-Container */
+        display: flex;       /* Flex-Container */
         justify-content: space-between;
         flex-wrap: wrap;
-    
         overflow: hidden;      /* hide the overflow */
         margin-bottom: 2px;
         margin: 1rem 0 0 0;
     }
-    
     .jo-pics figure {
         width: 30%;
     }
-
+    .journey__last-part > p {
+        padding-left: 20px;
+        padding-right: 20px;
+        /* max-width: 600px; */
+    }
 
 
 
@@ -438,7 +448,6 @@ footer img {
 }
 
 
-
 .journey-txt {
     text-align: left;
     font-family: "Rancho";
@@ -450,8 +459,8 @@ footer img {
  einen block-container braucht */
  .rule-container {
      text-align: left;
-     width: 100%;
-     max-width: 600px;
+     width: 40%;
+     max-width: 300px;
      border: rgb(70, 70, 70) solid 1.9px;
      border-radius: 5px;
     }
@@ -779,7 +788,7 @@ a {
     padding-right: 20px;
     max-width: 600px;
 }
- .journey__last-part > p {
+.journey__last-part > p {
     padding-left: 20px;
     padding-right: 20px;
     max-width: 600px;
