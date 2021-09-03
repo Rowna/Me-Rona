@@ -246,7 +246,7 @@ footer img {
 /* @media (min-width:641px) { / portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones / } */
 @media screen and (min-width: 1025px) {
     main {
-        max-width: 600px;
+        max-width: 700px;
     }
 
     .nav-toggle-label {
@@ -342,11 +342,11 @@ footer img {
         width: auto;
         font-size: 1.5rem;
     }
-    .hero-content h1 {
+    .hero-content, .hero-journey__content h1 {
         font-size: 3.7rem;
     }
 
-    .hero-content p {
+    .hero-content, .hero-journey__content p {
         width: 95%;
         font-size: 1.5em;
     }
@@ -379,16 +379,20 @@ footer img {
         overflow: hidden;      /* hide the overflow */
         margin-bottom: 2px;
         margin: 1rem 0 0 0;
+        max-width: 800px;
+
     }
     .jo-pics figure {
-        width: 30%;
+        width: 45%;
     }
     .journey__last-part > p {
         padding-left: 20px;
         padding-right: 20px;
         /* max-width: 600px; */
     }
-
+    .jo-pics, .journey__last-part p {
+        font-size: 1.5em;
+    }
 
 
     footer {
@@ -786,12 +790,12 @@ a {
 .jo-pics {
     padding-left: 20px;
     padding-right: 20px;
-    max-width: 600px;
+    max-width: 700px;
 }
 .journey__last-part > p {
     padding-left: 20px;
     padding-right: 20px;
-    max-width: 600px;
+    max-width: 700px;
 }
 .jo-map {
     margin: 0;
