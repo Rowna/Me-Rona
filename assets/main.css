@@ -342,12 +342,16 @@ footer img {
         width: auto;
         font-size: 1.5rem;
     }
-    .hero-content, .hero-journey__content h1 {
+    .hero-content, 
+    .hero-journey__content h1, 
+    .hero-achievement__content h1 {
         font-size: 3.7rem;
     }
 
-    .hero-content, .hero-journey__content p {
-        width: 95%;
+    .hero-content, 
+    .hero-journey__content p,
+    .hero-achievement__content p {
+        /* width: 95%; */
         font-size: 1.5em;
     }
 
@@ -390,10 +394,23 @@ footer img {
         padding-right: 20px;
         /* max-width: 600px; */
     }
-    .jo-pics, .journey__last-part p {
+    .jo-pics, .journey__last-part p, .book p {
         font-size: 1.5em;
     }
 
+
+    /* Inhalt von achievement Section */
+    .book figure, .game figure, .website figure {
+        width: 100%;
+        padding-top: 20px;
+        margin: 0;
+    }
+    .book h2, .game h2, .website h2 {
+        font-size: 1.5em;
+    }
+    
+    
+    /* Inhalt von Footer */
 
     footer {
         display: flex;
@@ -532,7 +549,10 @@ img:hover {
 
 */
 
-
+.hero-about__content {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 .who {
     font-family: 'Ravi Prakash';
     font-size: 1.5rem;
@@ -572,9 +592,9 @@ img:hover {
     color: #5B5555;
 }
 .aussenbalkon {
-    margin-left: 20px;
+    /* margin-left: 20px; 
     margin-right: 20px;
-    width: 90%;
+    width: 90%; */
     background-color:#C4C4C4;
     height: 0.4rem;
 }
@@ -604,7 +624,6 @@ h5 {
     background-color: #427b9c;
     color: white;
     font-size: 24px;
-    font-weight: 8px;
     width: 100%;
     letter-spacing: 1.5px;
     text-align: center;
@@ -782,7 +801,7 @@ a {
     padding-right: 20px;
 } 
 */
-.hero-journey__content {
+.hero-journey__content, .hero-achievement__content {
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -791,6 +810,10 @@ a {
     padding-left: 20px;
     padding-right: 20px;
     max-width: 700px;
+}
+.book-pic {
+    padding: 0;
+    margin: ;
 }
 .journey__last-part > p {
     padding-left: 20px;
@@ -807,14 +830,18 @@ a {
 }
 
 
-.book-title, .game-title {
+.book-title, .game-title, .website-title {
     margin: 2rem 2rem 0 0;
 }
 
-.game-title {
+.game-title, .website-title {
     margin-top: 3rem;
 }
-
+.book figure, .game figure, .website figure {
+    width: 100%;
+    padding-top: 20px;
+    margin: 0;
+}
 .level-2 {
 margin-top: 2rem;
 }
