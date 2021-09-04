@@ -1,0 +1,16 @@
+{
+  "name": "me-rona",
+  "version": "1.0.0",
+  "description": "Mein persönliches Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": [],
+  "author": "Rowan Kharnoub",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
