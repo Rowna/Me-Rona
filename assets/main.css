@@ -139,27 +139,12 @@ das direkt auf einen "checked" .nav-toggle folgt. */
 .nav-toggle-label::after {
     top: 7px;
 }
-p {
-    text-align: left;
-    font-family: 'Rancho';
-    font-size: 1.1rem;
-    font-weight: normal;
-    color: #5B5555;
-    /*
-    margin-left: 20px;
-    margin-right: 20px;
-    */
-}
 
 h1 {
     font-family: 'Rancho';
     font-style: normal;
     font-size: 2.2rem;
     color: #7589F0;
-    /*
-    margin-left: 20px;
-    margin-right: 20px;
-    */
 }
 
 h2 {
@@ -169,10 +154,15 @@ h2 {
     font-size: 1.5rem;
     color: #6f79aa;
     /*
-    margin-left: 20px;
-    margin-right: 20px;
     margin-top: 7rem;
     */
+}
+p {
+    text-align: left;
+    font-family: 'Rancho';
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: #5B5555;
 }
 .hero-content {
     width: 100%;
@@ -344,13 +334,15 @@ footer img {
     }
     .hero-content, 
     .hero-journey__content h1, 
-    .hero-achievement__content h1 {
+    .hero-achievement__content h1,
+    .hero-about__content h1 {
         font-size: 3.7rem;
     }
 
     .hero-content, 
     .hero-journey__content p,
-    .hero-achievement__content p {
+    .hero-achievement__content p,
+    .hero-about__content p {
         /* width: 95%; */
         font-size: 1.5em;
     }
@@ -549,11 +541,7 @@ img:hover {
 
 */
 
-.hero-about__content {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.who {
+.hero-about__content h2 {
     font-family: 'Ravi Prakash';
     font-size: 1.5rem;
     width: 80%;
@@ -801,7 +789,9 @@ a {
     padding-right: 20px;
 } 
 */
-.hero-journey__content, .hero-achievement__content {
+.hero-journey__content,
+.hero-achievement__content,
+.hero-about__content {
     padding-left: 20px;
     padding-right: 20px;
 }
