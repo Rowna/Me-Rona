@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/normalize.css">
+    <link rel="stylesheet" href="../assets/animate.css">
+    <link rel="stylesheet" href="../assets/main.css">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Navbar Brand -->
+        <div class="navbar-brand">
+            <a href="/">Rowan Kharnoub</a>
+        </div>
+        <!-- Checkbox -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <!-- Navbar -->
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Works</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </header>              
+
+    <main class="main-body">
+        {{ content | safe }}
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-brand">
+            <a href="/">2021 Rowan K.</a>
+        </div>
+        <div class="footer-brand_a">
+            <a href="/">2021 Rowan Kharnoub</a>
+        </div>
+        <ul>
+            <li>
+                <a href="#" class="fb">
+                    <img src="../images/facebook.png" alt="fakebook">
+                </a>
+            </li>
+            <li>
+                <a href="#" class="tw">
+                    <img src="../images/twitter.png" alt="twitter">
+                </a>
+            </li>
+            <li>
+                <a href="#" class="li">
+                    <img src="../images/linkedin-logo.png" alt="twitter">
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
