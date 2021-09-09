@@ -23,8 +23,9 @@ main {
 }
 /* Eine Variale, die diese Definition als Background nimmt*/
 :root {
-    --background: rgba(241, 237, 241, 0.85);
-    --base-padding: 21.5rem;
+    --background: rgba(241, 237, 241, 0.25);
+    --background-mobile:  rgba(241, 237, 241, 0.85);
+    --base-padding: 22.5rem;
     --desktop-font: 1.25rem;
 }
 img:hover {
@@ -48,7 +49,7 @@ header {
     justify-content: flex-end;
     position: fixed;
     width: 100%;
-    background: var(--background);
+    background: var(--background-mobile);
     z-index: 999;
     padding: 0 2rem;
     padding-top: 1.2rem;
@@ -60,7 +61,7 @@ nav {
     position: absolute;
     top: 100%;
     left: 0;
-    background: var(--background);
+    background: var(--background-mobile);
     width: 100%;
     transform: scale(1 ,0);
     transform-origin: top;
@@ -71,6 +72,7 @@ nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    padding-left: 1rem;
 }
 
 nav li {
@@ -145,7 +147,8 @@ h1 {
     font-family: 'Rancho';
     font-style: normal;
     font-size: 2.2rem;
-    color: #7589F0;
+    color: rgba(180, 167, 180, 0.95);;
+    /* color: #7589F0; */
 }
 
 h2 {
@@ -242,17 +245,18 @@ footer img {
         /* max-width: 700px; */
         padding-right: 0;
         padding-left: 0;
+        margin-top: -1.5rem;
     }
-
     .nav-toggle-label {
         display: none;
     }
     header {
         display: flex;
-        background: #D1DDE6;
+        /* background: #D1DDE6; */
+        background: var(--background);
+        padding-left: 0;
     }
     .navbar-brand {
-        background: #D1DDE6;
         width: 50%;
         padding-left: var(--base-padding);
         /*
@@ -266,6 +270,7 @@ footer img {
         text-transform: uppercase;
         font-weight: bold;
         letter-spacing: 2px;
+        padding-left: 1rem;
     }
     nav {
         /* Diese Eigenschaft ist unnötig
@@ -274,11 +279,11 @@ footer img {
         display: flex;
         flex-grow: 1;
         justify-content: flex-end;
-        background: #D1DDE6;
         position: relative;
         align-items: center;
         transition: none;
         transform: scale(1,1);
+        background: none;
     }
     nav ul {
         display: flex;
@@ -324,6 +329,7 @@ footer img {
         background-image: url("../images/eutin.jpg");
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: center -140px;
     }
     .hero-content {
         width: 60%;
@@ -346,16 +352,18 @@ footer img {
     .hero-journey__content h1, 
     .hero-achievement__content h1,
     .hero-about__content h1 {
-        font-size: 3.7rem;
+        font-size: 2.5rem;
     }
 
     .hero-content, 
     .hero-journey__content p,
     .hero-achievement__content p,
     .hero-about__content p {
-        font-size: 1.5em;
+        font-size: 1.7em;
     }
-
+    .hero-about__content h5 {
+        font-size: 1.2rem;
+    }
     /*
     .main-pic-desktop {
         background-image: url("../images/eutin.jpg");
@@ -377,6 +385,10 @@ footer img {
         display: none;
     }
     /* Inhalt von my-journey Section */
+    .my-journey {
+        padding-left: var(--base-padding);
+        padding-right: var(--base-padding);
+    }
     .jo-pics {
         display: flex;       /* Flex-Container */
         justify-content: space-between;
@@ -384,7 +396,7 @@ footer img {
         overflow: hidden;      /* hide the overflow */
         margin-bottom: 2px;
         margin: 1rem 0 0 0;
-        max-width: 800px;
+        /* max-width: 800px; */
 
     }
     .jo-pics figure {
@@ -410,6 +422,17 @@ footer img {
         font-size: 1.5em;
     }
     
+    /* Inhalt von about-me Section */
+    .about-me {
+        padding-left: var(--base-padding);
+        padding-right: var(--base-padding);
+    }
+    /* Inhalt von my-achievements Section */
+    .my-achievements {
+        padding-left: var(--base-padding);
+        padding-right: var(--base-padding);
+    }
+
     
     /* Inhalt von Footer */
 
@@ -458,15 +481,6 @@ footer img {
         display: inline-block;
         width: 1.8rem;
     }
-/*     
-    a.fb {
-        background-image: url("../images/facebook.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 30%;
-        width: auto;
-    } */
-
 }
 
 
@@ -588,14 +602,6 @@ img:hover {
 .ed {
     padding-top: 4rem;
     padding-bottom: 1rem;
-}
-
-.skill {
-    text-align: left;
-    font-weight: normal;
-    font-family: 'Rancho';
-    font-size: 20px;
-    color: #5B5555;
 }
 .aussenbalkon {
     /* margin-left: 20px; 
@@ -821,7 +827,7 @@ a {
 .jo-pics {
     padding-left: 20px;
     padding-right: 20px;
-    max-width: 700px;
+    /* max-width: 700px; */
 }
 .book-pic {
     padding: 0;
@@ -830,7 +836,7 @@ a {
 .journey__last-part > p {
     padding-left: 20px;
     padding-right: 20px;
-    max-width: 700px;
+    /* max-width: 700px; */
 }
 .jo-map {
     margin: 0;
@@ -841,7 +847,6 @@ a {
     margin-right: 0;
     margin-left: 0;
 }
-
 
 .book-title, .game-title, .website-title {
     margin: 2rem 2rem 0 0;
