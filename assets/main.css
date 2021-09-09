@@ -24,7 +24,8 @@ main {
 /* Eine Variale, die diese Definition als Background nimmt*/
 :root {
     --background: rgba(241, 237, 241, 0.85);
-    --base-padding: 20rem;
+    --base-padding: 21.5rem;
+    --desktop-font: 1.25rem;
 }
 img:hover {
     opacity: .7;
@@ -166,12 +167,14 @@ p {
 }
 .hero-content {
     width: 100%;
-    padding-top: 5rem;
     padding-left: 20px;
     padding-right: 20px;
     /* Diese sind unnötig
     margin-top: 4.5rem;
     */
+}
+.hero-content h2 {
+    padding-top: 5rem;
 }
 
 /* Main-pic für desktop-version wird nicht angezeigt */
@@ -236,7 +239,9 @@ footer img {
 /* @media (min-width:641px) { / portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones / } */
 @media screen and (min-width: 1025px) {
     main {
-        max-width: 700px;
+        /* max-width: 700px; */
+        padding-right: 0;
+        padding-left: 0;
     }
 
     .nav-toggle-label {
@@ -256,6 +261,11 @@ footer img {
     }
     .navbar-brand a {
         color: #000000;
+        font-size: var(--desktop-font);
+        font-family: 'Rancho';
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
     }
     nav {
         /* Diese Eigenschaft ist unnötig
@@ -285,6 +295,7 @@ footer img {
         opacity: 1;
         position: relative;
         color: #000000;
+        font-size: var(--desktop-font);
     }
     /*
     nav a::before {
@@ -304,33 +315,32 @@ footer img {
         transform: scale(1,1);
     }
     */   
-    .rule-container {
-        display: none;
-    }
 
     /* Mainbild für Desktop Version */
-    .hero-content {
+    .me-hero {
+        padding: 0;
+        margin: 0;
+        height: 630px;
         background-image: url("../images/eutin.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        width: 100%;
-        height: 100vh;
+    }
+    .hero-content {
+        width: 60%;
         padding-left: var(--base-padding);
         padding-right: var(--base-padding);
-        padding-top: 7rem;
-        /* Diese sind unnötig
-        margin-top: 4.5rem;
-        */
     }
     
     .hero-content h1,
     .hero-content h2,
     .hero-content p {
         color: rgb(246, 249, 253);
+        padding-left: 1rem;
     }
     .hero-content h2 {
         width: auto;
         font-size: 1.5rem;
+        padding-top: 7rem;
     }
     .hero-content, 
     .hero-journey__content h1, 
@@ -343,7 +353,6 @@ footer img {
     .hero-journey__content p,
     .hero-achievement__content p,
     .hero-about__content p {
-        /* width: 95%; */
         font-size: 1.5em;
     }
 
@@ -540,6 +549,15 @@ img:hover {
 }
 
 */
+.jo-pics img,
+.jo-map img, 
+.book img, 
+.game img, 
+.website img {
+    vertical-align: top;
+    border-radius: 6px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+}
 
 .hero-about__content h2 {
     font-family: 'Ravi Prakash';
@@ -616,7 +634,10 @@ h5 {
     letter-spacing: 1.5px;
     text-align: center;
     cursor: pointer;
- }
+    border-radius: 2.5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+
+}
 
 /* 
 
@@ -794,6 +815,7 @@ a {
 .hero-about__content {
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 50px;
 }
 
 .jo-pics {
@@ -814,6 +836,7 @@ a {
     margin: 0;
     padding: 0 20px;
 }
+
 .jo-pics figure {
     margin-right: 0;
     margin-left: 0;
