@@ -1,2 +1,2 @@
 # Me-Rona
-Meine persönliche Portfolio-Seite.
+Es geht um eine persönliche Portfolio-Seite.
