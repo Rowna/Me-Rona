@@ -16,12 +16,8 @@ main {
     max-width: 100%;
     padding-right: 1rem;
     padding-left: 1rem;
-    /* To center the main 
-    display: flex;
-    justify-content: center;
-    */
 }
-/* Eine Variale, die diese Definition als Background nimmt*/
+/* Variabeln bestimmen: Eine Variale, die diese Definition z.B. als Background nimmt */
 :root {
     --background: rgba(241, 237, 241, 0.25);
     --background-mobile:  rgba(241, 237, 241, 0.85);
@@ -113,7 +109,6 @@ das direkt auf einen "checked" .nav-toggle folgt. */
     top: 1.3rem;
     left: 0;
 }
-
 .nav-toggle-label span, 
 .nav-toggle-label::before,
 .nav-toggle-label::after {
@@ -142,7 +137,6 @@ h1 {
     font-style: normal;
     font-size: 2.2rem;
     color: rgba(180, 167, 180, 0.95);;
-    /* color: #7589F0; */
 }
 
 h2 {
@@ -151,9 +145,6 @@ h2 {
     font-weight: normal;
     font-size: 1.5rem;
     color: #6f79aa;
-    /*
-    margin-top: 7rem;
-    */
 }
 p {
     font-family: 'Rancho';
@@ -166,9 +157,6 @@ p {
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
-    /* Diese sind unnötig
-    margin-top: 4.5rem;
-    */
 }
 .hero-content h2 {
     padding-top: 5rem;
@@ -237,6 +225,252 @@ footer img {
 .footer-brand_a {
     display: none;
 }
+
+/*Contact Me Mobile-Version */
+.contact-container {
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+.get-me, .send-me {
+    margin-top: 5rem;
+}
+.send-me, .get-me {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.info-me a {
+    text-decoration: underline;
+    font-family: inherit;
+    color: #2168ee;
+    cursor: pointer;
+    letter-spacing: 1.2px;
+}
+.info-me p {
+    width: 100%;
+    font-size: 3.8rem;
+    letter-spacing: 2.5px;
+    margin: 0;
+    color: #c74bacf1;
+    /* padding-top: 4rem; */
+}
+.form-container {
+    border: solid 1px #ccc;
+    height: 630px;
+    margin-bottom: 3rem;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0px 2px 44px 0px rgba(0, 0, 0, 0.2);;
+}
+.send-message {
+    width: inherit;
+    padding: .8rem;
+}
+.send-message label,
+.send-message input, 
+.send-message select, textarea {
+    display: block;
+    margin-top: .6rem;
+    width: 100%;
+    padding: 0;
+}
+.send-message input {
+    padding: 5px;
+}
+.send-btn {
+    width: 100%;
+    margin-top: .5rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 0px 2px 44px 0px rgba(0, 0, 0, 0.2);;
+    background: #5e76eb;
+    font-weight: bold;
+}
+
+.journey-txt {
+    text-align: left;
+    font-family: "Rancho";
+    font-size: 1rem;
+}
+.figcaption {
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    color: #7e7676;
+    font-family: 'Rancho';
+    text-align: left;
+    padding: 2px;
+}
+
+figcaption {
+    display: block;
+    color: #7e7676;
+    font-family: "Rancho";
+    padding: 2px;
+    text-align: left;
+}
+.jo-pics img,
+.jo-map img, 
+.book img, 
+.game img, 
+.website img {
+    vertical-align: top;
+    border-radius: 6px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+}
+.hero-about__content h2 {
+    font-family: 'Ravi Prakash';
+    font-size: 1.5rem;
+    width: 80%;
+    color: #5B5555;
+    text-align: left;
+}
+.txt-last {
+    text-align: left;
+    font-family: 'Rancho';
+    font-size: 1rem;
+    color: #5B5555;
+    margin-bottom: var(--space-padding);
+}
+.skill_title {
+    font-family: "Ravi Prakash";
+    font-size: 1.5rem;
+    color: #5B5555;
+    text-align: left;
+    color: #5B5555;
+    padding-top: 1rem;
+    font-weight: bold;
+}
+
+.ed {
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+}
+.aussenbalkon {
+    background-color:#C4C4C4;
+    height: 0.4rem;
+}
+.innenbalkon {
+    background-color: #ED3281;
+    height: inherit;
+}
+
+h5 {
+    text-align: left;
+    font-size: 1rem;
+    color: #5B5555;
+    margin-bottom: 1rem;
+}
+.h5_txt {
+    text-align: left;
+    font-size: 18px;
+    color: #5B5555;
+    margin-bottom: 2.5rem;
+}
+.linked-btn {
+    display: inline-block;
+    text-decoration: none;
+    /* border: #427b9c solid 15px; */
+    border: solid 20px #427b9c;
+    background-color: #427b9c;
+    color: white;
+    font-size: 24px;
+    width: 100%;
+    letter-spacing: 1.5px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2.5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+
+}
+a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.2rem 0;
+    font-family: "Ravi Prakash";
+}
+.mobile-nav__item a {
+    text-decoration: none;
+    color: #0e4f1f;
+    font-weight: bold;
+    padding: 0.2rem 0;
+}
+.hero {
+    margin-top: 0;
+    padding-top: 0;
+}
+.ich-bin {
+    font-family: "Ravi Prakash";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 29px;
+    color: #343030;
+    font-weight: 400;
+}
+.main-txt, .rona-txt {
+    font-family: Rancho;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+}
+.hero img {
+    width: 306px;
+    padding-top: 1.5rem;
+}
+
+.hero-image {
+    text-align: center;
+}
+.hero-journey__content,
+.hero-achievement__content,
+.hero-about__content {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+}
+.jo-pics {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.book-pic {
+    padding: 0;
+    margin: 0;
+}
+.journey__last-part > p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.jo-map {
+    margin: 0;
+    padding: 0 20px;
+}
+
+.jo-pics figure {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.book-title, .game-title, .website-title {
+    margin: 2rem 2rem 0 0;
+}
+
+.game-title, .website-title {
+    margin-top: 3rem;
+}
+.book figure, .game figure, .website figure {
+    width: 100%;
+    padding-top: 20px;
+    margin: 0;
+}
+.level-2 {
+margin-top: 2rem;
+}
+
+
+
 /* @media (min-width:641px) { / portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones / } */
 @media screen and (min-width: 1025px) {
     main {
@@ -250,16 +484,12 @@ footer img {
     }
     header {
         display: flex;
-        /* background: #D1DDE6; */
         background: var(--background);
         padding-left: 0;
     }
     .navbar-brand {
         width: 50%;
         padding-left: var(--base-padding);
-        /*
-        max-width: 1100px;
-        */
     }
     .navbar-brand a {
         color: #000000;
@@ -271,9 +501,6 @@ footer img {
         padding-left: 1rem;
     }
     nav {
-        /* Diese Eigenschaft ist unnötig
-        padding-right: var(--base-padding);
-        */
         display: flex;
         flex-grow: 1;
         justify-content: flex-end;
@@ -300,25 +527,6 @@ footer img {
         color: #000000;
         font-size: var(--desktop-font);
     }
-    /*
-    nav a::before {
-        content: '';
-        display: block;
-        height: 5px;
-        background: black;
-        position: absolute;
-        top: -.75em;
-        left: 0;
-        right: 0;
-        transform: scale(0, 1);
-        transition: transform ease-in-out 250ms;
-    }
-    
-    nav a:hover::before {
-        transform: scale(1,1);
-    }
-    */   
-
     /* Mainbild für Desktop Version */
     .me-hero {
         padding: 0;
@@ -362,18 +570,7 @@ footer img {
     .hero-about__content h5 {
         font-size: 1.2rem;
     }
-    /*
-    .main-pic-desktop {
-        background-image: url("../images/eutin.jpg");
-        background-size: cover;
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-    }
-    */
-    /* My Journey Section in Desktop-Version */
+    /* My Journey Section - DV */
     .container {
         display: flex;
         justify-content: space-around;
@@ -382,13 +579,13 @@ footer img {
     .main-pic-mobile {
         display: none;
     }
-    /* Inhalt von my-journey Section */
+    /* Inhalt von my-journey Section - DV */
     .my-journey {
         padding-left: var(--base-padding);
         padding-right: var(--base-padding);
     }
     .jo-pics {
-        display: flex;       /* Flex-Container */
+        display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         overflow: hidden;      /* hide the overflow */
@@ -410,7 +607,7 @@ footer img {
     }
 
 
-    /* Inhalt von achievement Section */
+    /* Inhalt von achievement Section - DV  */
     .book figure, .game figure, .website figure {
         width: 100%;
         padding-top: 20px;
@@ -420,12 +617,12 @@ footer img {
         font-size: 1.5em;
     }
     
-    /* Inhalt von about-me Section */
+    /* Inhalt von about-me Section - DV */
     .about-me {
         padding-left: var(--base-padding);
         padding-right: var(--base-padding);
     }
-    /* Inhalt von my-achievements Section */
+    /* Inhalt von my-achievements Section - DV */
     .my-achievements {
         padding-left: var(--base-padding);
         padding-right: var(--base-padding);
@@ -443,8 +640,85 @@ footer img {
     .last-achiev {
         padding-bottom: var(--space-padding);
     }
-    /* Inhalt von Footer */
-
+    /*Contact Me Desktop-Version */
+    .info-me h2 {
+        color: #000c41;
+        font-size: 2rem;
+    }
+    .info-me p {
+        width: 100%;
+        font-size: 6rem;
+        letter-spacing: 2.5px;
+        margin: 0;
+        color: #c74bacf1;
+    }
+    .info-me a {
+        text-decoration: underline;
+        font-family: inherit;
+        color: #2168ee;
+        text-align: center;
+        cursor: pointer;
+        letter-spacing: 1.5px;
+    }
+    .contact-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-right: var(--base-padding);
+        padding-left: var(--base-padding);
+        background: #d1f0eb;
+        align-items: center;
+    }
+    .get-me, .send-me {
+        width: 50%;
+        margin-bottom: 1.5rem;
+        padding-right: 3rem;
+        padding-left: 1rem;
+        /* text-align: left; */
+    }
+    .form-container {
+        border: solid 1px #ccc;
+        height: 630px;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        background: rgb(251, 248, 249);
+        border-radius: 5px;
+        box-shadow: 0px 2px 44px 0px rgba(0, 0, 0, 0.2);;
+    }
+    form {
+        margin: 1rem;
+    }
+    .send-message {
+        width: inherit;
+        padding: 1rem;
+    }
+    .send-message label,
+    .send-message input, 
+    .send-message select, textarea {
+        display: block;
+        margin-top: .6rem;
+        width: 100%;
+        padding: 3px 10px;
+    }
+    .send-message input {
+        padding: 10px;
+    }
+    .send-btn {
+        width: 100%;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        padding: 10px;
+        border-radius: 5px;
+        border: 0;
+        box-shadow: 0px 2px 44px 0px rgba(0, 0, 0, 0.2);;
+        background: #5e76eb;
+    }
+    form textarea {
+        height: 6em;
+    }
+    /* Inhalt von Footer Desktop-Version */
     footer {
         display: flex;
         justify-content: space-between;
@@ -471,6 +745,7 @@ footer img {
         font-size: 1.2rem;
         margin: 0;
         padding-top: 5px;
+        padding-left: 1rem;
     } 
     footer ul {
         padding-right: var(--base-padding);
@@ -481,429 +756,49 @@ footer img {
         display: flex;
         margin-left: 1em;
         margin-bottom: 0;
-        margin-top: 0.5rem;
-        /* width: 5rem; */
-        
+        margin-top: 0.5rem;        
     }
-    
     footer img {
         display: inline-block;
         width: 1.8rem;
     }
+
+    .linked-btn:hover,
+    .send-btn:hover {
+        animation-name: pulse;
+        animation-duration: 3500ms;
+    }
+    @keyframes pulse {
+        from {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+
+        50% {
+            -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+        }
+
+        to {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+    }
+    .animate__pulse {
+        -webkit-animation-name: pulse;
+        animation-name: pulse;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+    }
 }
 
 
-.journey-txt {
-    text-align: left;
-    font-family: "Rancho";
-    font-size: 1rem;
-}
-.figcaption {
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    color: #7e7676;
-    font-family: 'Rancho';
-    text-align: left;
-    padding: 2px;
-}
 
-figcaption {
-    display: block;
-    color: #7e7676;
-    font-family: "Rancho";
-    padding: 2px;
-    text-align: left;
-}
-/*  
-img:hover {
-    transform:scale(1.5);
-    -ms-transform:scale(1.5); /* IE 9 
-    -moz-transform:scale(1.5); /* Firefox 
-    -webkit-transform:scale(1.5); /* Safari and Chrome 
-    -o-transform:scale(1.5); /* Opera 
-}
-.me-pic {
-    filter: drop-shadow(0px 10px 10px rgba(10, 10, 10, 0.5));
-    border-radius: 8px;
-}
-
-
-.jo-pics {
-    display: flexbox       /* Flex-Container
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    overflow: hidden;      /* hide the overflow 
-    margin-bottom: 2px;
-    margin: 1rem 0 0 0;
-}
-
-.jo-pics figure {
-    width: 30%;
-}
-
-
-.jo-map {
-    display: inline-block; /* change the default display type to inline-block 
-    overflow: hidden;      /* hide the overflow 
-    margin-bottom: 2px;
-    margin: 2rem 0 0 0;
-}
-.jo-pics img {
-    transition: all 0.2s ease;
-    vertical-align: middle;
-}
-
-*/
-.jo-pics img,
-.jo-map img, 
-.book img, 
-.game img, 
-.website img {
-    vertical-align: top;
-    border-radius: 6px;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
-}
-
-.hero-about__content h2 {
-    font-family: 'Ravi Prakash';
-    font-size: 1.5rem;
-    width: 80%;
-    color: #5B5555;
-    text-align: left;
-}
-.txt-last {
-    text-align: left;
-    font-family: 'Rancho';
-    font-size: 1rem;
-    color: #5B5555;
-    margin-bottom: var(--space-padding);
-}
-
-
-.skill_title {
-    font-family: "Ravi Prakash";
-    font-size: 1.5rem;
-    color: #5B5555;
-    text-align: left;
-    color: #5B5555;
-    padding-top: 1rem;
-    font-weight: bold;
-}
-
-.ed {
-    padding-top: 4rem;
-    padding-bottom: 1rem;
-}
-.aussenbalkon {
-    /* margin-left: 20px; 
-    margin-right: 20px;
-    width: 90%; */
-    background-color:#C4C4C4;
-    height: 0.4rem;
-}
-.innenbalkon {
-    background-color: #ED3281;
-    height: inherit;
-}
-
-h5 {
-    text-align: left;
-    font-size: 1rem;
-    color: #5B5555;
-    margin-bottom: 1rem;
-}
-.h5_txt {
-    text-align: left;
-    font-size: 18px;
-    color: #5B5555;
-    margin-bottom: 2.5rem;
-}
-
-.linked-btn {
-    display: inline-block;
-    text-decoration: none;
-    /* border: #427b9c solid 15px; */
-    border: solid 20px #427b9c;
-    background-color: #427b9c;
-    color: white;
-    font-size: 24px;
-    width: 100%;
-    letter-spacing: 1.5px;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 2.5px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-
-}
-a {
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.2rem 0;
-    font-family: "Ravi Prakash";
-}
-
-.navbar-toggler {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    padding: 9px 10px;
-    margin-right: 15px;
-    margin-bottom: 8px;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    font-size: 1.25rem;
-    line-height: 1;
-    background: transparent;
-    border: 1px solid;
-    border-radius: 0.25rem;
-}
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-.navbar-toggler {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    border-color: transparent;
-	margin-right: 15px;
-	margin-bottom: 8px;
-	padding: 9px 10px;
-}
-.icon-bar {
-    display: block;
-    width: 22px;
-    height: 3px;
-    border-radius: 1px;
-    background-color: #7589F0;
-    position: relative;
-}
-.main-header {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    left: 0;
-    top: 0;
-    width: 93vw;
-    background-color: #FBF6F6;
-    padding-left: 1rem;
-    padding-right: 1rem; 
-}
-
-.toggle-button {
-    width: 2.5rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0.5rem;
-    vertical-align: middle;
-}
-.toggle-button:focus {
-    outline: none;
-}
-.toggle-button__bar {
-    width: 100%;
-    height: 0.2rem;
-    background: #7589F0;
-    display: block;
-    margin: 0.4rem 0;
-}
-.main-nav {
-    display: none;
-}
-.main-nav__items {
-    list-style: none;
-}
-.main-nav__item {
-    display: inline-block;
-    margin: 0 1rem;   
-}
-.mobile-nav__item a {
-    text-decoration: none;
-    color: #0e4f1f;
-    font-weight: bold;
-    padding: 0.2rem 0;
-}
-.hero {
-    margin-top: 0;
-    padding-top: 0;
-}
-.ich-bin {
-    font-family: "Ravi Prakash";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 29px;
-    color: #343030;
-    font-weight: 400;
-}
-.main-txt, .rona-txt {
-    font-family: Rancho;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
-}
-.hero img {
-    width: 306px;
-    padding-top: 1.5rem;
-   /** border-radius: 30px; **/
-}
-
-.hero-image {
-    text-align: center;
-}
-.hero-journey__content,
-.hero-achievement__content,
-.hero-about__content {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 50px;
-}
-.jo-pics {
-    padding-left: 20px;
-    padding-right: 20px;
-    /* max-width: 700px; */
-}
-.book-pic {
-    padding: 0;
-    margin: 0;
-}
-.journey__last-part > p {
-    padding-left: 20px;
-    padding-right: 20px;
-    /* max-width: 700px; */
-}
-.jo-map {
-    margin: 0;
-    padding: 0 20px;
-}
-
-.jo-pics figure {
-    margin-right: 0;
-    margin-left: 0;
-}
-
-.book-title, .game-title, .website-title {
-    margin: 2rem 2rem 0 0;
-}
-
-.game-title, .website-title {
-    margin-top: 3rem;
-}
-.book figure, .game figure, .website figure {
-    width: 100%;
-    padding-top: 20px;
-    margin: 0;
-}
-.level-2 {
-margin-top: 2rem;
-}
-
-.navbar-ul {
-    list-style-type: none;
-    float: right;
-    margin: 1rem;
-}
-
-.contact-menu__list {
-    list-style-type: none;
-    float: left;
-    margin: 1rem;
-}
-
-.navbar-ul li, .contact-menu__list li {
-    display: inline-block;
-}
-.navbar-ul li a, .contact-menu__list li a{
-    text-decoration: none;
-    font-weight: bold;
-    font-family: fantasy;  
-    color: rgb(0, 0, 0);
-    padding: 5px 15px;
-    border-radius: 0.6rem;
-    border: 1px solid transparent;
-}
-.contact-menu__list li a {
-    padding: 5px !important;
-}
-.navbar-ul li a:hover{
-    background-color:#fff ;
-    color:#000;
-    border-radius: 0.6rem;
-}
-.home a{
-    background-color:#fff ;
-    color:#000;
-}
 /*
-.contact-menu {
-    animation-name: headShake;
-    animation-duration: 2000ms;
-}
-@keyframes headShake {
-    0% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
-  
-    6.5% {
-      -webkit-transform: translateX(-6px) rotateY(-9deg);
-      transform: translateX(-6px) rotateY(-9deg);
-    }
-  
-    18.5% {
-      -webkit-transform: translateX(5px) rotateY(7deg);
-      transform: translateX(5px) rotateY(7deg);
-    }
-  
-    31.5% {
-      -webkit-transform: translateX(-3px) rotateY(-5deg);
-      transform: translateX(-3px) rotateY(-5deg);
-    }
-  
-    43.5% {
-      -webkit-transform: translateX(2px) rotateY(3deg);
-      transform: translateX(2px) rotateY(3deg);
-    }
-  
-    50% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
-  }
-
-.navbar {
-    animation-name: slideInRight;
-    animation-duration: 1500ms;
-}
-@keyframes slideInRight {
-    from {
-      -webkit-transform: translate3d(100%, 0, 0);
-      transform: translate3d(100%, 0, 0);
-      visibility: visible;
-    }
-  
-    to {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-}
 @media (min-width:320px) { / smartphones, iPhone, portrait 480x320 phones / }
 @media (min-width:481px) { / portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. / }
 @media (min-width:641px) { / portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones / }
 @media (min-width:961px) { / tablet, landscape iPad, lo-res laptops ands desktops / }
 @media (min-width:1025px) { / big landscape tablets, laptops, and desktops / }
 @media (min-width:1281px) { / hi-res laptops and desktops  }
-
 */ 
