@@ -426,7 +426,8 @@ a {
 }
 .hero-journey__content,
 .hero-achievement__content,
-.hero-about__content {
+.hero-about__content, 
+.txt-journey-container {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 50px;
@@ -453,14 +454,19 @@ a {
     margin-left: 0;
 }
 
-.book-title, .game-title, .website-title {
+.book-title, 
+.game-title, 
+.website-title {
     margin: 2rem 2rem 0 0;
 }
 
-.game-title, .website-title {
+.game-title, 
+.website-title {
     margin-top: 3rem;
 }
-.book figure, .game figure, .website figure {
+.book figure, 
+.game figure, 
+.website figure {
     width: 100%;
     padding-top: 20px;
     margin: 0;
@@ -591,29 +597,56 @@ margin-top: 2rem;
         overflow: hidden;      /* hide the overflow */
         margin-bottom: 2px;
         margin: 1rem 0 0 0;
-        /* max-width: 800px; */
-
     }
     .jo-pics figure {
         width: 45%;
     }
+    .journey__last-part {
+        display: flex;
+        padding-top: 4rem;
+        align-items: baseline;
+        justify-content: center;
+        width: 100%;
+    }
+    .txt-journey-container {
+        width: 50%;
+    }
+    .pic-journey-container {
+        width: 50%;
+    }
+    .jo-map {
+        margin-left: auto;
+        width: 60%;
+    }
     .journey__last-part > p {
         padding-left: 20px;
         padding-right: 20px;
-        /* max-width: 600px; */
     }
-    .jo-pics, .journey__last-part p, .book p {
+    .jo-pics, 
+    .journey__last-part p, 
+    .book p {
         font-size: 1.5em;
     }
-
+    .aussenbalkon {
+        background-color:#C4C4C4;
+        height: 0.8rem;
+    }
+    .innenbalkon {
+        background-color: #ED3281;
+        height: inherit;
+    }
 
     /* Inhalt von achievement Section - DV  */
-    .book figure, .game figure, .website figure {
+    .book figure, 
+    .game figure, 
+    .website figure {
         width: 100%;
         padding-top: 20px;
         margin: 0;
     }
-    .book h2, .game h2, .website h2 {
+    .book h2, 
+    .game h2, 
+    .website h2 {
         font-size: 1.5em;
     }
     
