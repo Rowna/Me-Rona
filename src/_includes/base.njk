@@ -12,15 +12,10 @@
 </head>
 
 <body>
-    {# Lade folgende Datei an dieser Stelle hinein! #}
-    {% include "./header.njk" %}
-
-    <main class="main-body">
-        {{ content | safe }}
-    </main>
-
-    {# Lade folgende Datei an dieser Stelle hinein! #}
-    {% include "./footer.njk" %}
-
+{# Lade folgende Datei an dieser Stelle hinein! #}
+{% include "./header.njk" %}
+<main class="main-body">{{ content | safe }}</main>
+{# Lade folgende Datei an dieser Stelle hinein! #}
+ {% include "./footer.njk" %}
 </body>
 </html>
