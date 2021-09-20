@@ -17,7 +17,7 @@
     --fs-h3: 1.875rem;
     --fs-h5: 1.25rem;
     --fs-p: 1.25rem;
-    --nav-fs: 1.6rem;
+    --fs-nav: 1.6rem;
     --desktop-font: 1.3rem;
 
     /* ==== Font Family */
@@ -39,7 +39,6 @@
     /* ======= .25rem = 4px, .5rem = 8px, .75rem = 12px ... ====== */
     --base-padding-l: 21.5rem;
     --base-padding-r: 20.5rem;
-    --space-padding: 7rem;
     --header-pt: 1.2rem;
     --header-pb: 1.2rem;
     --p-mobile: 2rem;
@@ -114,7 +113,7 @@ header {
 }
 .navbar-brand a {
     letter-spacing: 1px;
-    font-size: var(--nav-fs);
+    font-size: var(--fs-nav);
     color: var(--nav-color);
     font-family: var(--ff-title);
     /* padding-top: 2rem; */
@@ -150,7 +149,7 @@ nav a {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
-    font-size: var(--nav-fs);
+    font-size: var(--fs-nav);
     opacity: 0;
     transition: opacity 150ms ease-in-out;
 }
@@ -180,9 +179,9 @@ das direkt auf einen "checked" .nav-toggle folgt. */
 .nav-toggle-label::before,
 .nav-toggle-label::after {
     display: block;
+    position: relative;
     height: 4px;
     width: 2.8em;
-    position: relative;
     border-radius: 1rem;
     background: var(--nav-color);
 }
@@ -236,14 +235,6 @@ img {
 .title-about-me {
     margin-top: 3rem;
 }
-
-/* 
- {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 50px;
-} */
-
 .me-hero-container {
     padding-top: 4rem;
     z-index: 1;
@@ -286,17 +277,12 @@ footer {
     padding-right: var(--pl);
     width: 100%;
 }
-/* .footer-brand {
-    display: flex;
-    width: 50%;
-    padding-top: .3em;
-} */
 .footer-brand a {
     margin: 0;
     padding: 0;
     opacity: 2;
-    color: var(--nav-color);
-    font-size: var(--nav-fs);
+    color: black;
+    font-size: var(--fs-h5);
     font-family: var(--ff-title);
     letter-spacing: .4px;
 }
@@ -309,7 +295,6 @@ footer ul {
 footer li {
     margin: 0 7px;
     /* padding-bottom: 0.3em; */
-    /* width: 100%; */
 }
 footer img {
     display: inline-block;
@@ -572,10 +557,10 @@ margin-top: 2rem;
         margin: 0;
     }
     nav {
-        padding-right: var(--base-padding-r);
         display: flex;
         flex-grow: 1;
         justify-content: flex-end;
+        padding-right: var(--base-padding-r);
         position: relative;
         align-items: center;
         transition: none;
@@ -714,6 +699,7 @@ margin-top: 2rem;
         margin: 1rem 0 0 0;
     }
     .jo-pics figure {
+        /* flex: 1 1 calc(280px + 5rem); */
         width: 45%;
         margin-bottom: 3.5rem;
     }
@@ -786,7 +772,7 @@ margin-top: 2rem;
     } */
 
     .last-achiev {
-        padding-bottom: var(--space-padding);
+        padding-bottom: var(--mb);
     }
     /*Contact Me Desktop-Version */
     .info-me h2 {
@@ -892,7 +878,7 @@ margin-top: 2rem;
     .footer-brand_a a {
         opacity: 1;
         color: var(--nav-dektop-c);
-        font-family: 'Roboto';
+        font-family: var(--ff-title);
         text-decoration: none;
         font-size: var(--fs-h5);
         margin: 0;
@@ -913,7 +899,7 @@ margin-top: 2rem;
         width: 1.8rem;
     }
     .linked-btn:hover,
-    .send-btn:hover {
+    .send-btn:hover, .say-hi:hover {
         animation-name: pulse;
         animation-duration: 800ms;
     }
