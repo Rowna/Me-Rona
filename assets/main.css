@@ -594,15 +594,17 @@ margin-top: 2rem;
         font-size: auto;
     }
     /* Mainbild für Desktop Version */
+    
     .me-hero {
         padding: 0;
         margin: 0;
         padding-left: 1.5rem;
-        height: 650px;
-        background-image: url("../images/eutin.jpg");
+        height: 670px;
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, .60)),
+            url("../images/eutin.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center -140px;
     }
     h1 {
         font-family: var(--ff-title);
@@ -636,11 +638,11 @@ margin-top: 2rem;
     }
     .hero-content p {
         width: 90%;
-        color: rgb(243, 240, 224);
+        color: rgb(219, 217, 203);
         --fs-p: 1rem;
         margin: 0;
         padding: 0;
-        font-family: 'Roboto';
+        font-family: var(--ff-title);
         font-weight: 600;
     }
     .hero-content h2 {
