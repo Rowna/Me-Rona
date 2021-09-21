@@ -1,22 +1,15 @@
 {
-  "name": "Me-Rona",
+  "name": "me-rona",
   "version": "1.0.0",
-  "description": "Meine persönliche Portfolio-Seite.",
+  "description": "Mein persönliches Portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Rowna/Me-Rona.git"
+    "dev": "eleventy --serve",
+    "build": "eleventy"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Rowna/Me-Rona/issues"
-  },
-  "homepage": "https://github.com/Rowna/Me-Rona#readme",
+  "author": "Rowan Kharnoub",
+  "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1"
   }
