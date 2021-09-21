@@ -1,11 +1,26 @@
-// $(window).on("scroll", function() {
-//     if($(window).scrollTop() > 50) {
-//         $(".header").addClass("active");
-//     } else {
-//         //remove the background property so it comes transparent again (defined in your css)
-//        $(".header").removeClass("active");
-//     }
-// });
+const lightbox = document.createElement('div')
+lightbox.id = 'lightbox'
+document.body.appendChild(lightbox)
 
-// window.alert('Hallo Welt!');
-// console.log("index.js geladen.")
+const images = document.querySelectorAll('img')
+images.forEach(image => {
+    image.addEventListener('click', e => {
+        lightbox.classList.add('active')
+        const img = document.createElement('img')
+        img.src = image.src
+        while (lightbox.firstChild) {
+            lightbox.removeChild(lightbox.firstChild)
+        }
+        lightbox.appendChild(img)
+    })
+})
+
+lightbox.addEventListener('click', e => {
+    // Wenn wir ein img auswählen und schließen, dann wieder öffnen
+    if(e.target !== e.currentTarget) return
+    lightbox.classList.remove('active')
+})
+
+
+
+

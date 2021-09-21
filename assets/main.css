@@ -133,8 +133,9 @@ nav {
 nav ul {
     margin: 0;
     padding: 0;
-    padding-left: var(--pl);
+    padding-left: var(--header-pt);
     list-style: none;
+    padding-top: 1em;
 }
 nav li {
     /* margin: var(--mb-1); */
@@ -233,23 +234,17 @@ img {
 .hero-content h2, 
 .hero-journey__content h1, 
 .title-about-me {
-    margin-top: 3rem;
-}
-.me-hero-container {
-    padding-top: 4rem;
-    z-index: 1;
+    margin-top: 6rem;
 }
 .hero-content {
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
 }
-
 /* Main-pic für desktop-version wird nicht angezeigt */
 .main-pic-desktop {
     display: none;
 }
-
 .say-hi {
     display: none;
 }
@@ -570,7 +565,7 @@ margin-top: 2rem;
     }
     nav ul {
         display: flex;
-        margin-top: 0;
+        padding-top: 0;
     }
     nav li {
         margin-left: 2em;
@@ -598,6 +593,7 @@ margin-top: 2rem;
     .me-hero {
         padding: 0;
         margin: 0;
+        padding-top: 4rem;
         padding-left: 1.5rem;
         height: 670px;
         background-image:
@@ -949,6 +945,29 @@ margin-top: 2rem;
         transform: scale(1.1);
         cursor: pointer;
     }
+    #lightbox {
+        position: fixed;
+        z-index: var(--z-modal);
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .8);
+        display: none;
+    }
+    #lightbox.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #lightbox img {
+        max-width: 90%;
+        max-height: 80%;
+        padding: 8px;
+        background-color: black;
+        border: 2px solid white;
+    }
+
+
 /*     
     @keyframes pulse {
         from {
