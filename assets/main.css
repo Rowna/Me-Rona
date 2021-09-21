@@ -197,17 +197,17 @@ das direkt auf einen "checked" .nav-toggle folgt. */
 .nav-toggle-label::after {
     top: 6px;
 }
-
+/* 
 img:hover {
     opacity: .7;
-    /* -webkit-animation-name: fadeInUpBig; */
-}
+    /* -webkit-animation-name: fadeInUpBig; 
+} */
 img {
     max-width: 100%;
     height: auto;
-    object-fit: cover;
+    /* object-fit: cover; */
     /* animation-name: fadeInUpBig; */
-    transition: opacity 0.25s ease-in-out;
+    /* transition: opacity 0.25s ease-in-out; */
 }
 .btn-container a {
     font-size: var(--fs-h5);
@@ -941,8 +941,15 @@ margin-top: 2rem;
         animation-name: fadeInUp;
         animation-duration: 4000ms;
     }
-
-    
+    .jo-pics img, .jo-map img {
+        transition: 1s;
+    }
+    .jo-pics img:hover, .jo-map img:hover {
+        filter: grayscale(50%);
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+/*     
     @keyframes pulse {
         from {
             -webkit-transform: scale3d(1, 1, 1);
@@ -964,7 +971,7 @@ margin-top: 2rem;
         animation-name: pulse;
         -webkit-animation-timing-function: ease-in-out;
         animation-timing-function: ease-in-out;
-    }
+    } */
 
 }
 
