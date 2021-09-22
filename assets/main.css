@@ -154,6 +154,13 @@ nav a {
     opacity: 0;
     transition: opacity 150ms ease-in-out;
 }
+nav li a:hover{
+    color: #ffffff;
+    padding: .3em .3em;
+    border: 9px var(--nav-color);
+    border-radius: 9px;
+    background-color: var(--nav-color);
+}
 /* ~ dieser Selektor sucht nach einem nav, 
 das direkt auf einen "checked" .nav-toggle folgt. */
 .nav-toggle:checked ~ nav {
@@ -168,6 +175,7 @@ das direkt auf einen "checked" .nav-toggle folgt. */
     display: none;
 }
 .nav-toggle-label {
+    cursor: pointer;
     position: absolute;
     left: 0;
     top: 1.2rem;
@@ -962,8 +970,9 @@ margin-top: 2rem;
     #lightbox img {
         max-width: 90%;
         max-height: 80%;
-        padding: 4px;
-        background-color: #b1b1b18f;
+        padding: 6px;
+        box-shadow: rgba(241, 237, 241, 0.25);
+        /* background-color: #b1b1b18f; */
         border: 2px solid rgba(255, 255, 255, 0.616);
     }
 
