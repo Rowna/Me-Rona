@@ -10,6 +10,7 @@ const images = document.querySelectorAll("img");
 
 // Images einzeln durchgehen
 images.forEach((image) => {
+  // Ausser fuer Riesenbild im "About Me"-Abschnitt:
   if (image.id != "img-about-me") {
     // Event Listener:
     // Sobald ein Image geklickt wird, anonyme Funktion ausfuehren
