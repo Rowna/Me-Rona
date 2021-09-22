@@ -216,31 +216,43 @@ img {
 .btn-container a {
     font-size: var(--fs-h5);
 }
-/* Paddings für Alle Section - Mobile */
-.me-hero, .my-journey, 
+/* .me-hero, .my-journey, 
+.about-me-container,
 .title-about-me, .about-me, 
 .my-achievements, .jo-pics, 
 .hero-achievement__content,
 .hero-about__content, 
 .hero-journey__content, 
-.txt-journey-container {
+.txt-journey-container
+{
     margin-right: 1rem;
     margin-left: 1rem;
-}
-.title-about-me {
-    padding-left: 1rem;
-    padding-right: 1rem;
+} */
+
+/* Paddings für Alle Section - Mobile */
+.me-hero, .my-journey, 
+.title-about-me, 
+.about-me, 
+.my-achievements, 
+.contact-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 .hero-content h2, 
 .hero-journey__content h1, 
-.title-about-me, .hero-achievement__content h1 {
+.title-about-me, 
+.hero-achievement__content h1 {
     padding-top: 6rem;
 }
-
+.jo-pics, 
+.achiev-containers, 
+.hero-about__content {
+    padding-top: var(--pl);
+}
 .hero-content {
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
+    /* padding-left: 20px; */
+    /* padding-right: 20px; */
 }
 /* Main-pic für desktop-version wird nicht angezeigt */
 .main-pic-desktop {
@@ -251,7 +263,7 @@ img {
 }
 .main-pic-mobile {
     /* Abstand Top-bottom right-left*/
-    margin: 20px 20px;
+    /* margin: 20px 20px; */
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 .main-pic-mobile img {
@@ -259,7 +271,6 @@ img {
     /* to set the img in the middle of the shadow */
     vertical-align: top;
 }
-
 /* Footer für Mobile-Version*/
 footer {
     display: flex;
@@ -308,13 +319,6 @@ footer img {
     text-align: left;
     width: 100%;
 }
-.get-me, .send-me {
-    margin-top: 5rem;
-}
-.send-me, .get-me {
-    padding-left: 10px;
-    padding-right: 10px;
-}
 .info-me a {
     text-decoration: underline;
     font-family: inherit;
@@ -324,16 +328,21 @@ footer img {
 }
 .info-me p {
     width: 100%;
-    font-size: 3.8rem;
+    font-size: var(--fs-h2);
+    font-weight: 600;
     letter-spacing: 2.5px;
     margin: 0;
     color: #c74bacf1;
-    /* padding-top: 4rem; */
+    padding-top: 7rem;
+}
+.info-me h2 {
+    width: 80%;
+    font-size: 1.1rem;
 }
 .form-container {
     border: solid 1px #ccc;
     height: 630px;
-    margin-bottom: 3rem;
+    margin: 3rem 0;
     background: rgb(255, 255, 255);
     border-radius: 5px;
     box-shadow: 0px 2px 44px 0px rgba(0, 0, 0, 0.2);;
@@ -416,7 +425,6 @@ footer img {
     /* padding-top: 1rem; */
     font-weight: bold;
 }
-
 .ed {
     padding-top: 4rem;
     padding-bottom: 1rem;
@@ -486,7 +494,7 @@ h5 {
 } */
 .jo-map {
     margin: 0;
-    padding: 0 20px;
+    /* padding: 0 20px; */
 }
 .bild-about-me {
     display: none;
@@ -495,22 +503,23 @@ h5 {
     margin-right: 0;
     margin-left: 0;
 }
-
+/* 
 .book-title, 
 .game-title, 
 .website-title {
-    margin: 2rem 2rem 0 0;
-}
+    padding: 2rem 2rem 0 0;
+} */
 
 .game-title, 
 .website-title {
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
+
 .book figure, 
 .game figure, 
 .website figure {
     width: 100%;
-    padding-top: 20px;
+    /* padding-top: 20px; */
     margin: 0;
 }
 .level-2 {
@@ -632,7 +641,6 @@ margin-top: 2rem;
         width: 63%;
         padding-left: var(--base-padding-l);
         padding-right: var(--base-padding-l);
-        /* margin-top: 5rem; */
     }
     .hero-content p {
         width: 90%;
@@ -679,10 +687,9 @@ margin-top: 2rem;
         display: none;
     }
     /* Paddings und Margins für Sections */
-    .my-journey, 
-    .title-about-me, 
-    .about-me, 
-    .my-achievements {
+    .my-journey,
+    .title-about-me,
+    .my-achievements, .about-me {
         padding-left: var(--base-padding-l);
         padding-right: var(--base-padding-l);
         /* margin-top: var(--mt); */
@@ -699,7 +706,6 @@ margin-top: 2rem;
         margin: 1rem 0 0 0;
     }
     .jo-pics figure {
-        /* flex: 1 1 calc(280px + 5rem); */
         width: 45%;
         margin-bottom: 3.5rem;
     }
@@ -741,12 +747,14 @@ margin-top: 2rem;
     .skill-container, .who-skill__container {
         display: flex;
         justify-content: space-between;
+        /* align-items: center; */
     }
     .skill-container, .btn-container, .who-skill__container {
         padding-top: var(--mt);
     }
     .who-I-container {
         width: 40%;
+        flex-basis: 45%;
     }
     .who-I-container p {
         margin-top: 4rem;
@@ -787,8 +795,8 @@ margin-top: 2rem;
         display: flex;
         justify-content: space-between;
         margin: 0;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        height: 100vh;
+        padding-top: 6rem;
         padding-right: var(--base-padding-l);
         padding-left: var(--base-padding-l);
         background: #d1f0eb;
@@ -796,8 +804,8 @@ margin-top: 2rem;
     }
     .get-me, .send-me {
         width: 50%;
-        margin-bottom: 1.5rem;
-        padding-right: 3rem;
+        /* margin-bottom: 1.5rem; */
+        /* padding-right: 3rem; */
         padding-left: 1rem;
         /* text-align: left; */
     }
@@ -805,7 +813,7 @@ margin-top: 2rem;
         border: solid 1px #ccc;
         height: 630px;
         margin-top: 2rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         background: rgb(251, 248, 249);
         border-radius: 5px;
         box-shadow: 0px 2px 44px 0px rgba(0, 0, 0, 0.2);;
