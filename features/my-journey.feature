@@ -8,3 +8,5 @@ Feature: My-Journey-Gallery
   When I scroll down to the "My-Journey" section,
   Then I see a number of pictures telling the story of Rona's journey to Germany
   And I see captions describing the pictures above
+  And When I hover over the images with the mouse,
+  Then the images enlargen for as long as I keep the mouse pointer above them.

@@ -1,4 +1,4 @@
-Feature: "Me Journey" Image Modal
+Feature: "My Journey" Image Modal
 
     As a user
     I want to see the pictures of "My Journey" as big pictures

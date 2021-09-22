@@ -11,11 +11,10 @@
     <title>{{ title }}</title>
 </head>
 
-<body>
-{# Lade folgende Datei an dieser Stelle hinein! #}
+<body> {# Lade folgende Datei an dieser Stelle hinein! #}
 {% include "./header.njk" %}
-<main class="main-body">{{ content | safe }}</main>
-{# Lade folgende Datei an dieser Stelle hinein! #}
- {% include "./footer.njk" %}
+<main class="main-body">{{ content | safe }}
+</main>{# Lade folgende Datei an dieser Stelle hinein! #}
+{% include "./footer.njk" %}
 </body>
 </html>

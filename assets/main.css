@@ -4,8 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,800;1,200;1,300;1,400;1,600;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 
-
-/* Variabeln bestimmen: Eine Variale, die diese Definition z.B. als Background nimmt */
 :root {
     --background: rgba(241, 237, 241, 0.25);
     --background-mobile:  rgba(241, 237, 241, 0.85);
@@ -25,7 +23,6 @@
     --ff-title: 'Roboto';
 
     /* ======= Colors ====== */
-
     --nav-color: #427b9c;
     --nav-dektop-c: hsl(230, 15%, 24%);
 
@@ -42,10 +39,8 @@
     --header-pt: 1.2rem;
     --header-pb: 1.2rem;
     --p-mobile: 2rem;
-
     --pl: 1.8em;
     --pb: 1.2em;
-
     --mt: 6rem;
     --mb: 6rem;
 }
@@ -221,9 +216,6 @@ img {
 .btn-container a {
     font-size: var(--fs-h5);
 }
-.btn-container {
-    margin: 3rem 0 6rem 0;
-}
 /* Paddings für Alle Section - Mobile */
 .me-hero, .my-journey, 
 .title-about-me, .about-me, 
@@ -241,9 +233,10 @@ img {
 }
 .hero-content h2, 
 .hero-journey__content h1, 
-.title-about-me {
-    margin-top: 6rem;
+.title-about-me, .hero-achievement__content h1 {
+    padding-top: 6rem;
 }
+
 .hero-content {
     width: 100%;
     padding-left: 20px;
@@ -369,7 +362,8 @@ footer img {
     box-shadow: 0px 2px 44px 0px rgba(0, 0, 0, 0.2);;
     font-weight: bold;
     color: #d1f0eb;
-    background: var(--nav-color);}
+    background: var(--nav-color);
+}
 
 .journey-txt {
     text-align: left;
@@ -540,8 +534,8 @@ margin-top: 2rem;
         display: flex;
         justify-content: space-between;
         background: var(--background);
-        padding-top: var(--header-pt);
-        padding-bottom: var(--header-pb);
+        /* padding-top: var(--header-pt); */
+        /* padding-bottom: var(--header-pb); */
     }
     .navbar-brand {
         padding-left: var(--base-padding-l);
@@ -638,7 +632,7 @@ margin-top: 2rem;
         width: 63%;
         padding-left: var(--base-padding-l);
         padding-right: var(--base-padding-l);
-        margin-top: 5rem;
+        /* margin-top: 5rem; */
     }
     .hero-content p {
         width: 90%;
@@ -691,8 +685,8 @@ margin-top: 2rem;
     .my-achievements {
         padding-left: var(--base-padding-l);
         padding-right: var(--base-padding-l);
-        margin-top: var(--mt);
-        margin-bottom: var(--mb);
+        /* margin-top: var(--mt); */
+        /* margin-bottom: var(--mb); */
     }
 
     /* Container für die Pics in my-Journey Section*/
@@ -748,7 +742,7 @@ margin-top: 2rem;
         display: flex;
         justify-content: space-between;
     }
-    .skill-container, .btn-container {
+    .skill-container, .btn-container, .who-skill__container {
         padding-top: var(--mt);
     }
     .who-I-container {
@@ -763,20 +757,6 @@ margin-top: 2rem;
         width: 50%;
         flex-basis: 45%;
     }
-    /* Inhalt von achievement Section - DV  */
-    /*.book figure, 
-    .game figure, 
-    .website figure {
-        width: 100%;
-        padding-top: 20px;
-        margin: 0;
-    }
-     .book h2, 
-    .game h2, 
-    .website h2 {
-        font-size: 1.5em;
-    } */
-
     .last-achiev {
         padding-bottom: var(--mb);
     }
