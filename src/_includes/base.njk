@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../assets/normalize.css">
-    <link rel="stylesheet" href="../assets/animate.css">
-    <link rel="stylesheet" href="../assets/main.css">
-    <script src="../assets/index.js" defer></script>
-    <title>{{ title }}</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../assets/normalize.css">
+        <link rel="stylesheet" href="../assets/animate.css">
+        <link rel="stylesheet" href="../assets/main.css">
+        <script src="../assets/index.js" defer="defer"></script>
+        <title>{{ title }}</title>
+    </head>
 
-<body> {# Lade folgende Datei an dieser Stelle hinein! #}
-{% include "./header.njk" %}
-<main class="main-body">{{ content | safe }}
-</main>{# Lade folgende Datei an dieser Stelle hinein! #}
-{% include "./footer.njk" %}
-</body>
+    <body>
+        {# Lade folgende Datei an dieser Stelle hinein! #}
+        {% include "./header.njk" %}
+        <main class="main-body">{{ content | safe }}
+        </main>
+        {# Lade folgende Datei an dieser Stelle hinein! #}
+        {% include "./footer.njk" %}
+    </body>
 </html>
