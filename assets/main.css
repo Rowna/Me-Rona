@@ -851,7 +851,6 @@ footer img {
     display: inline-block;
     width: 1.8rem;
   }
-
   /* Animation fuer die Buttons */
   .linked-btn:hover,
   .send-btn:hover,
@@ -859,7 +858,6 @@ footer img {
     animation-name: pulse;
     animation-duration: 800ms;
   }
-
   /* Modal Hintergrund fuer Images */
   #lightbox {
     position: fixed;
