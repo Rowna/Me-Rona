@@ -6,9 +6,9 @@ Feature: Homesick-Since-Calculator
     To learn something quite personal from her.
 
     Scenario: Getting the info on "My Journey"
-    When I open the "My Journey" page / section
-    Then I see the amount of years and months since Rona left Damascus.
-    
+        When I open the "My Journey" page / section
+        Then I see the amount of years and months since Rona left Damascus.
+
 # -------------------------------------------
 
 
