@@ -60,11 +60,15 @@ body {
 main {
   max-width: 100%;
 }
+/* Weitere allgemeine Einstellungen */
+img {
+  max-width: 100%;
+  height: auto;
+}
 ul {
   /* keine Bullets bei Listen */
   list-style: none;
 }
-
 a {
   /* keine unterstrichenen Links */
   text-decoration: none;
@@ -82,6 +86,12 @@ h2 {
   font-size: 1.5rem;
   color: var(--nav-color);
 }
+h5 {
+  text-align: left;
+  font-size: 1rem;
+  color: #5b5555;
+  margin-bottom: 1rem;
+}
 p {
   font-family: var(--ff-p);
   text-align: left;
@@ -89,6 +99,8 @@ p {
   font-weight: normal;
   color: #5b5555;
 }
+
+/* ==== Header-Einstellung ==== */
 header {
   /* platziert den Header auf den Viewport bezogen */
   position: fixed;
@@ -98,14 +110,12 @@ header {
   /* laesst den Header ueber der Seite schweben */
   z-index: var(--z-fixed);
   width: 100%;
-
   /* macht den Header zum Flex-Container */
   display: flex;
   /* platziert alle Flex-Elemente am Ende des Containers */
   justify-content: flex-end;
   /* richtet die Flex-Elemente vertikal in der Mitte aus */
   align-items: center;
-
   padding: 2rem;
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
@@ -125,11 +135,9 @@ nav {
   /* ganz oben, ganz links */
   top: 100%;
   left: 0;
-
   text-align: left;
   width: 100%;
   background: rgba(241, 237, 241, 0.972);
-
   /* Animations-Einstellungen */
   transform: scale(1, 0);
   transform-origin: top;
@@ -160,7 +168,6 @@ nav a {
   opacity: 0;
   transition: opacity 150ms ease-in-out;
 }
-
 /* ~ dieser Selektor sucht nach einem nav, 
 das direkt auf einen "checked" .nav-toggle folgt. 
 "Uebersetzung": "Sobald auf das Nav-Icon (Hamburger) geklickt wird ..."*/
@@ -179,7 +186,6 @@ das direkt auf einen "checked" .nav-toggle folgt.
   /* zunaechst unsichtbar */
   display: none;
 }
-
 /* Das Hamburger-Symbol, aus einem Label mit drei Spans erzeugt */
 .nav-toggle-label {
   cursor: pointer;
@@ -214,15 +220,6 @@ das direkt auf einen "checked" .nav-toggle folgt.
   top: 6px;
 }
 
-/* Weitere allgemeine Einstellungen */
-img {
-  max-width: 100%;
-  height: auto;
-}
-.btn-container a {
-  font-size: var(--fs-p);
-}
-
 /* Paddings für alle Abschnitte -- Mobile */
 .me-hero,
 .my-journey,
@@ -244,6 +241,32 @@ img {
 .hero-about__content {
   padding-top: var(--pb);
 }
+
+/* Alle Figcaption im Projekt für MV & DV */
+.jo-pics figure figcaption,
+.jo-map figcaption,
+.book figcaption a,
+.game figcaption a,
+.website figcaption a {
+  text-decoration: none;
+  display: block;
+  color: #7e7676;
+  text-align: left;
+  font-size: 0.7rem;
+  padding: 7px 7px;
+  font-family: var(--ff-p);
+  cursor: pointer;
+}
+.jo-pics img,
+.jo-map img,
+.book img,
+.game img,
+.website img {
+  vertical-align: top;
+  border-radius: 6px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+}
+/* ==== me-hero-Einstellung ==== */
 .hero-content {
   width: 100%;
 }
@@ -262,48 +285,95 @@ img {
   /* damit das bild mitten im Schatteneffekt steht */
   vertical-align: top;
 }
-/* Footer für Mobile-Version*/
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  background-color: var(--background-mobile);
-  padding-top: var(--pb);
-  padding-left: var(--pl);
-  padding-bottom: var(--pb);
-  padding-right: var(--pl);
-  width: 100%;
-}
-.footer-brand a {
-  margin: 0;
-  padding: 0;
-  opacity: 2;
-  color: black;
-  font-size: var(--fs-p);
-  font-family: var(--ff-title);
-  letter-spacing: 0.4px;
-}
-footer ul {
-  display: flex;
-  margin: -0.2em;
-}
-footer li {
-  margin: 0 7px;
-}
-footer img {
-  display: inline-block;
-  width: 1.5rem;
-  vertical-align: text-bottom;
-  color: var(--nav-color);
-}
-/* Footer Brand fuer Desktop '2021 Rowan kharnoub' 
-    in Mobile-Version nicht anzeigen 
-*/
-.footer-brand_a {
+/* ==== about-me-contanier-Einstellung ==== */
+.bild-about-me {
   display: none;
 }
-/* Contact-Me fuer Mobile-Version */
+/* ==== my-journey-Einstellung ==== */
+.jo-map {
+  margin: 0;
+}
+.journey-txt {
+  text-align: left;
+  font-family: var(--ff-p);
+  font-size: 1rem;
+}
+.jo-pics figure {
+  margin-right: 0;
+  margin-left: 0;
+}
+/* ==== about-me-Einstellung ==== */
+.btn-container a {
+  font-size: var(--fs-p);
+}
+.hero-about__content h2 {
+  font-family: var(--ff-title);
+  font-size: 1.5rem;
+  width: 80%;
+  color: #5b5555;
+  text-align: left;
+}
+.txt-last {
+  padding-bottom: 2rem;
+}
+.skill_title {
+  font-family: var(--ff-title);
+  font-size: 1.5rem;
+  color: #5b5555;
+  text-align: left;
+  color: #5b5555;
+  font-weight: bold;
+}
+.ed {
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+}
+.aussenbalkon {
+  background-color: #c4c4c4;
+  height: 0.4rem;
+}
+.innenbalkon {
+  background-color: var(--nav-color);
+  height: inherit;
+}
+.h5_txt {
+  text-align: left;
+  font-size: 18px;
+  color: #5b5555;
+  margin-bottom: 2.5rem;
+}
+.linked-btn {
+  display: inline-block;
+  text-decoration: none;
+  border: solid 20px #427b9c;
+  background-color: #427b9c;
+  color: white;
+  font-size: 24px;
+  width: 100%;
+  letter-spacing: 1.5px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 2.5px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+/* ==== my-achievements-Einstellung ==== */
+.last-achiev {
+  padding-bottom: 3rem;
+}
+.game-title,
+.website-title {
+  margin-top: 4rem;
+}
+.book figure,
+.game figure,
+.website figure {
+  width: 100%;
+  margin: 0;
+}
+.level-2 {
+  margin-top: 2rem;
+}
+/* === Contact-Me fuer Mobile-Version === */
 .contact-container {
   margin: 0;
   text-align: left;
@@ -366,130 +436,48 @@ textarea {
   color: #d1f0eb;
   background: var(--nav-color);
 }
-
-.journey-txt {
-  text-align: left;
-  font-family: var(--ff-p);
-  font-size: 1rem;
-}
-/* Alle Figcaption im Projekt für MV & DV */
-.jo-pics figure figcaption,
-.jo-map figcaption,
-.book figcaption a,
-.game figcaption a,
-.website figcaption a {
-  text-decoration: none;
-  display: block;
-  color: #7e7676;
-  text-align: left;
-  font-size: 0.7rem;
-  padding: 7px 7px;
-  font-family: var(--ff-p);
-  cursor: pointer;
-}
-.jo-pics img,
-.jo-map img,
-.book img,
-.game img,
-.website img {
-  vertical-align: top;
-  border-radius: 6px;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
-}
-.hero-about__content h2 {
-  font-family: var(--ff-title);
-  font-size: 1.5rem;
-  width: 80%;
-  color: #5b5555;
-  text-align: left;
-}
-.txt-last {
-  padding-bottom: 2rem;
-}
-.last-achiev {
-  padding-bottom: 3rem;
-}
-.skill_title {
-  font-family: var(--ff-title);
-  font-size: 1.5rem;
-  color: #5b5555;
-  text-align: left;
-  color: #5b5555;
-  font-weight: bold;
-}
-.ed {
-  padding-top: 4rem;
-  padding-bottom: 1rem;
-}
-.aussenbalkon {
-  background-color: #c4c4c4;
-  height: 0.4rem;
-}
-.innenbalkon {
-  background-color: var(--nav-color);
-  height: inherit;
-}
-
-h5 {
-  text-align: left;
-  font-size: 1rem;
-  color: #5b5555;
-  margin-bottom: 1rem;
-}
-.h5_txt {
-  text-align: left;
-  font-size: 18px;
-  color: #5b5555;
-  margin-bottom: 2.5rem;
-}
-.linked-btn {
-  display: inline-block;
-  text-decoration: none;
-  border: solid 20px #427b9c;
-  background-color: #427b9c;
-  color: white;
-  font-size: 24px;
+/* Footer für Mobile-Version*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  background-color: var(--background-mobile);
+  padding-top: var(--pb);
+  padding-left: var(--pl);
+  padding-bottom: var(--pb);
+  padding-right: var(--pl);
   width: 100%;
-  letter-spacing: 1.5px;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 2.5px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
-.hero img {
-  width: 306px;
-  padding-top: 1.5rem;
-}
-.hero-image {
-  text-align: center;
-}
-.book-pic {
+.footer-brand a {
+  margin: 0;
   padding: 0;
-  margin: 0;
+  opacity: 2;
+  color: black;
+  font-size: var(--fs-p);
+  font-family: var(--ff-title);
+  letter-spacing: 0.4px;
 }
-.jo-map {
-  margin: 0;
+footer ul {
+  display: flex;
+  margin: -0.2em;
 }
-.bild-about-me {
+footer li {
+  margin: 0 7px;
+}
+footer img {
+  display: inline-block;
+  width: 1.5rem;
+  vertical-align: text-bottom;
+  color: var(--nav-color);
+}
+/* Footer Brand fuer Desktop '2021 Rowan kharnoub' 
+    in Mobile-Version nicht anzeigen 
+*/
+.footer-brand_a {
   display: none;
 }
-.jo-pics figure {
-  margin-right: 0;
-  margin-left: 0;
-}
-.game-title,
-.website-title {
-  margin-top: 4rem;
-}
-.book figure,
-.game figure,
-.website figure {
-  width: 100%;
-  margin: 0;
-}
-.level-2 {
-  margin-top: 2rem;
-}
+
 /* @media (min-width:641px) { / portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones / } */
 @media screen and (min-width: 1025px) {
   main {
@@ -497,9 +485,36 @@ h5 {
     padding-left: 0;
     margin-top: -1.5rem;
   }
-  .nav-toggle-label {
-    display: none;
+  h1 {
+    font-family: var(--ff-title);
+    font-style: normal;
+    font-size: var(--fs-h1);
+    color: var(--nav-color);
   }
+  h2 {
+    font-size: var(--fs-h2);
+    font-family: var(--ff-title);
+  }
+  h5 {
+    font-size: var(--fs-p);
+    font-weight: 600;
+  }
+  p {
+    font-family: var(--ff-p);
+    font-size: var(--fs-p);
+    text-align: left;
+    font-weight: normal;
+    color: #5b5555;
+  }
+  /* Paddings und Margins für Sections */
+  .my-journey,
+  .title-about-me,
+  .my-achievements,
+  .about-me {
+    padding-left: var(--base-padding);
+    padding-right: var(--base-padding);
+  }
+  /* === Header Einstellung === */
   header {
     overflow: hidden;
     width: 100%;
@@ -509,6 +524,9 @@ h5 {
     align-items: center;
     padding-left: var(--base-padding);
     padding-right: var(--base-padding);
+  }
+  .nav-toggle-label {
+    display: none;
   }
   .navbar-brand {
     width: 60%;
@@ -561,7 +579,11 @@ h5 {
     border-radius: 5px;
     font-size: auto;
   }
+  /* ==== me-hero-Einstellung ==== */
   /* Mainbild für Desktop Version */
+  .main-pic-mobile {
+    display: none;
+  }
   .me-hero {
     padding: 0;
     margin: 0;
@@ -571,30 +593,6 @@ h5 {
       url("../images/eutin.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-  }
-  h1 {
-    font-family: var(--ff-title);
-    font-style: normal;
-    font-size: var(--fs-h1);
-    color: var(--nav-color);
-  }
-  h2 {
-    font-size: var(--fs-h2);
-    font-family: var(--ff-title);
-  }
-  h5 {
-    font-size: var(--fs-p);
-    font-weight: 600;
-  }
-  p {
-    font-family: var(--ff-p);
-    font-size: var(--fs-p);
-    text-align: left;
-    font-weight: normal;
-    color: #5b5555;
-  }
-  .skill_title {
-    padding-bottom: 1rem;
   }
   .hero-content {
     width: 63%;
@@ -642,18 +640,11 @@ h5 {
     color: #427b9c;
     border: solid 15px rgb(241, 237, 237);
   }
-
-  .main-pic-mobile {
-    display: none;
+  /* ==== about-me-contanier-Einstellung ==== */
+  .bild-about-me {
+    display: block;
   }
-  /* Paddings und Margins für Sections */
-  .my-journey,
-  .title-about-me,
-  .my-achievements,
-  .about-me {
-    padding-left: var(--base-padding);
-    padding-right: var(--base-padding);
-  }
+  /* ==== my-journey-Einstellung ==== */
   /* Container für die Pics in my-Journey Section*/
   .jo-pics {
     display: flex;
@@ -667,17 +658,7 @@ h5 {
     width: 45%;
     margin-bottom: 3.5rem;
   }
-  .journey__last-part {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  .txt-journey-container {
-    overflow: auto;
-    width: 45%;
-  }
+  .txt-journey-container,
   .pic-journey-container {
     overflow: auto;
     width: 45%;
@@ -688,8 +669,32 @@ h5 {
   .jo-map {
     width: 60%;
   }
-  .bild-about-me {
-    display: block;
+  /* Animation fuer Images in my-journey*/
+  .jo-pics img {
+    animation-name: fadeInUp;
+    animation-duration: 4000ms;
+  }
+  .jo-pics img,
+  .jo-map img {
+    transition: 1s;
+  }
+  /* Beim Hovern den filter 'grayscale */
+  .jo-pics img:hover,
+  .jo-map img:hover {
+    filter: grayscale(50%);
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  .journey__last-part {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  /* ==== about-me-Einstellung ==== */
+  .skill_title {
+    padding-bottom: 1rem;
   }
   .aussenbalkon {
     background-color: #c4c4c4;
@@ -726,32 +731,11 @@ h5 {
     width: 50%;
     flex-basis: 45%;
   }
+  /* ==== my-achievements-Einstellung ==== */
   .last-achiev {
-    padding-bottom: var(--mb);
+    padding-bottom: var(--mt);
   }
-  /*Contact Me Desktop-Version */
-  .info-me h2 {
-    color: #000c41;
-    font-size: var(--fs-h3);
-    font-family: var(--ff-p);
-    line-height: 1.3em;
-    font-weight: 600;
-  }
-  .info-me p {
-    width: 100%;
-    font-size: 4rem;
-    letter-spacing: 2.8px;
-    margin: 0;
-    color: #c74bacf1;
-  }
-  .info-me a {
-    text-decoration: none;
-    font-family: inherit;
-    color: var(--nav-color);
-    text-align: center;
-    cursor: pointer;
-    letter-spacing: 1.5px;
-  }
+  /* === Contact-Me fuer Mobile-Version === */
   /* dieser Container hat .get-me und .send-me in sich */
   .contact-container {
     overflow: auto;
@@ -768,18 +752,27 @@ h5 {
   /* .get-me fuer linke Spalte 
      .send-me fuer rechte Spalte
   */
-  .get-me,
+  .get-me {
+    width: 45%;
+  }
+  .info-me h2 {
+    color: #000c41;
+    font-size: var(--fs-h3);
+    font-family: var(--ff-p);
+    line-height: 1.3em;
+    font-weight: 600;
+    padding: 0;
+  }
   .send-me {
-    width: 50%;
+    width: 45%;
     padding-left: 1rem;
   }
   .form-container {
     font-family: var(--ff-p);
     font-weight: bold;
     border: solid 1px #ccc;
-    height: 630px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    height: 700px;
+    margin: 0;
     background: rgb(251, 248, 249);
     border-radius: 5px;
     box-shadow: 0px 2px 44px 0px rgba(0, 0, 0, 0.2);
@@ -789,7 +782,6 @@ h5 {
   }
   .send-message {
     width: inherit;
-    padding: 1rem;
   }
   .send-message label,
   .send-message input,
@@ -806,7 +798,7 @@ h5 {
   .send-btn {
     width: 100%;
     margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-top: 3rem;
     padding: 10px;
     border-radius: 5px;
     border: 0;
@@ -815,7 +807,9 @@ h5 {
     background: var(--nav-color);
   }
   form textarea {
-    height: 6em;
+    height: 8rem;
+    overflow: hidden;
+    resize: none;
   }
   /* Inhalt von Footer Desktop-Version */
   footer {
@@ -857,6 +851,7 @@ h5 {
     display: inline-block;
     width: 1.8rem;
   }
+
   /* Animation fuer die Buttons */
   .linked-btn:hover,
   .send-btn:hover,
@@ -864,22 +859,7 @@ h5 {
     animation-name: pulse;
     animation-duration: 800ms;
   }
-  /* ANimation fuer Images in my-journey*/
-  .jo-pics img {
-    animation-name: fadeInUp;
-    animation-duration: 4000ms;
-  }
-  .jo-pics img,
-  .jo-map img {
-    transition: 1s;
-  }
-  /* Beim Hovern den filter 'grayscale */
-  .jo-pics img:hover,
-  .jo-map img:hover {
-    filter: grayscale(50%);
-    transform: scale(1.1);
-    cursor: pointer;
-  }
+
   /* Modal Hintergrund fuer Images */
   #lightbox {
     position: fixed;
