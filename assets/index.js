@@ -39,7 +39,7 @@ lightbox.addEventListener('click', e => {
     // Woertlich: Wenn wir eine andere target-ID haben 
     // als die "aktuelle" target-ID
     // => Wenn wir dasselbe Bild zwei mal hintereinander anklicken
-    if(e.target !== e.currentTarget) return
+    if (e.target !== e.currentTarget) return
     // modal-Div wieder unsichtbar machen.
     lightbox.classList.remove('active')
 })
