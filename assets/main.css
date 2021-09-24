@@ -168,7 +168,7 @@ nav a {
   letter-spacing: 1px;
   font-size: var(--fs-nav);
   opacity: 0;
-  transition: opacity .15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
 }
 /* ~ dieser Selektor sucht nach einem nav, 
 das direkt auf einen "checked" .nav-toggle folgt. 
@@ -735,8 +735,33 @@ footer img {
     flex-basis: 45%;
   }
   /* ==== my-achievements-Einstellung ==== */
-  .last-achiev {
-    padding-bottom: var(--mt);
+  .book,
+  .game,
+  .website {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap; /* Abkürzung fuer flex-direction & flex-wrap */
+    align-items: center;
+    row-gap: 50px;
+    padding: 3rem 0;
+  }
+  .book h5,
+  .game h5 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .book-container,
+  .webseite-container {
+    width: 45%;
+  }
+  .game-container {
+    order: 5;
+    width: 45%;
+  }
+  .book-title-container,
+  .game-title-container,
+  .webseite-title-container {
+    width: 45%;
   }
   /* === Contact-Me fuer Mobile-Version === */
   /* dieser Container hat .get-me und .send-me in sich */
