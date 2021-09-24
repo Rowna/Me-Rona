@@ -56,6 +56,8 @@ html {
 }
 body {
   text-align: left;
+  /* Standardmargin des Browsers korrigieren */
+  margin: 0;
 }
 main {
   max-width: 100%;
