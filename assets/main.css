@@ -144,7 +144,7 @@ nav {
   /* Nav-Animations-Einstellungen */
   transform: scale(1, 0);
   transform-origin: top;
-  transition: transform 440ms ease-in-out;
+  transition: transform 0.44s ease-in-out;
 }
 
 /* ============= Navigation ============= */
@@ -169,7 +169,7 @@ nav a {
   letter-spacing: 1px;
   font-size: var(--fs-nav);
   opacity: 0;
-  transition: opacity 150ms ease-in-out;
+  transition: opacity .15s ease-in-out;
 }
 /* ~ dieser Selektor sucht nach einem nav, 
 das direkt auf einen "checked" .nav-toggle folgt. 
@@ -182,7 +182,7 @@ das direkt auf einen "checked" .nav-toggle folgt.
   /* Links erscheinen im Display */
   opacity: 1;
   /* ... und das mit einem Uebergang von 250ms */
-  transition: opacity 250ms ease-in-out 250ms;
+  transition: opacity 0.25s ease-in-out 0.25s;
 }
 /* Ckeckbox, die die Navigations-Animation ausloest */
 .nav-toggle {
@@ -676,7 +676,7 @@ footer img {
   /* Animation fuer Images in my-journey*/
   .jo-pics img {
     animation-name: fadeInUp;
-    animation-duration: 4000ms;
+    animation-duration: 4s;
   }
   .jo-pics img,
   .jo-map img {
@@ -860,7 +860,7 @@ footer img {
   .send-btn:hover,
   .say-hi:hover {
     animation-name: pulse;
-    animation-duration: 800ms;
+    animation-duration: 0.8s;
   }
   /* Modal Hintergrund fuer Images */
   #lightbox {
@@ -885,58 +885,32 @@ footer img {
     border: 2px solid rgba(255, 255, 255, 0.616);
   }
 
-  /* Fade In Up Animation Jo-pics */
-  @-webkit-keyframes fadeInUp {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 100%, 0);
-      transform: translate3d(0, 100%, 0);
-    }
-
-    to {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-  }
+  /* Fade In Up Animation fuer Jo-pics */
   @keyframes fadeInUp {
-    from {
+    0% {
+      transform: translate3d(0, 100%, 0);
       opacity: 0;
-      -webkit-transform: translate3d(0, 100%, 0);
       transform: translate3d(0, 100%, 0);
     }
-
-    to {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0);
+    100% {
       transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
     }
   }
-  /* .animate__fadeInUp {
-    -webkit-animation-name: fadeInUp;
-    animation-name: fadeInUp;
-  } */
-  /* Pulse Animation Buttons */
+  /* Pulse Animation fuer Buttons */
   @keyframes pulse {
-    from {
-      -webkit-transform: scale3d(1, 1, 1);
+    0% {
+      transform: scale3d(1, 1, 1);
       transform: scale3d(1, 1, 1);
     }
-
     50% {
-      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05);
       transform: scale3d(1.05, 1.05, 1.05);
     }
-
-    to {
-      -webkit-transform: scale3d(1, 1, 1);
+    100% {
+      transform: scale3d(1, 1, 1);
       transform: scale3d(1, 1, 1);
     }
-  }
-  .animate__pulse {
-    -webkit-animation-name: pulse;
-    animation-name: pulse;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
   }
 }

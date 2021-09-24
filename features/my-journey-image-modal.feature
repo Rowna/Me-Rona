@@ -12,6 +12,6 @@ Feature: "My Journey" Image Modal
 
     Scenario: Toggeling the Image Modal off
         Given I have a single image of "My Journey" on a modal on screen,
-        When I click on the backdrop of the modal,
+        When I click on the Hamburger Menu,
         Then the modal and the image on it disappears
         And I can see the "My Journey" section again.
