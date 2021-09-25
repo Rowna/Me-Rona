@@ -30,6 +30,7 @@
   /* fuer die Navigation */
   --nav-color: #427b9c;
   --nav-dektop-c: hsl(230, 15%, 24%);
+  --txt-global: #5b5555;
 
   /* ======= z index fuer das Modal ====== */
   --z-fixed: 100;
@@ -39,6 +40,10 @@
   /* ======= .25rem = 4px, .5rem = 8px, .75rem = 12px etc. ====== */
   --base-padding: 23rem;
   --base-m-padding: 2rem; /* padding fuer Mobile*/
+  --fs-m-h1: 2.2rem;
+  --fs-m-h2: 1.5rem;
+  --fs-m-h5: 1rem;
+  --fs-m-p: 1.1rem;
   --pl: 1.8em;
   --pb: 1.2em;
   --mt: 6rem;
@@ -80,28 +85,28 @@ a {
 h1 {
   font-family: var(--ff-title);
   font-style: normal;
-  font-size: 2.2rem;
+  font-size: var(--fs-m-h1);
   color: var(--nav-color);
 }
 h2 {
   font-family: var(--ff-title);
   font-style: normal;
   font-weight: normal;
-  font-size: 1.5rem;
+  font-size: var(--fs-m-h2);
   color: var(--nav-color);
 }
 h5 {
   text-align: left;
   font-size: 1rem;
-  color: #5b5555;
-  margin-bottom: 1rem;
+  color: var(--txt-global);
+  margin-bottom: var(--fs-m-h5);
 }
 p {
   font-family: var(--ff-p);
   text-align: left;
-  font-size: 1.1rem;
+  font-size: var(--fs-m-p);
   font-weight: normal;
-  color: #5b5555;
+  color: var(--txt-global);
 }
 
 /* ==== Header-Einstellung ==== */
@@ -313,18 +318,31 @@ das direkt auf einen "checked" .nav-toggle folgt.
   font-family: var(--ff-title);
   font-size: 1.5rem;
   width: 80%;
-  color: #5b5555;
+  color: var(--txt-global);
   text-align: left;
 }
 .txt-last {
   padding-bottom: 2rem;
 }
+.skills-nummer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.skill-nummer {
+  width: auto;
+  height: auto;
+  font-weight: normal;
+  font-size: 0.91rem;
+  font-family: var(--ff-p);
+  color: var(--txt-global);
+}
 .skill_title {
   font-family: var(--ff-title);
   font-size: 1.5rem;
-  color: #5b5555;
+  color: var(--txt-global);
   text-align: left;
-  color: #5b5555;
+  color: var(--txt-global);
   font-weight: bold;
 }
 .ed {
@@ -342,7 +360,7 @@ das direkt auf einen "checked" .nav-toggle folgt.
 .h5_txt {
   text-align: left;
   font-size: 18px;
-  color: #5b5555;
+  color: var(--txt-global);
   margin-bottom: 2.5rem;
 }
 .linked-btn {
@@ -360,7 +378,9 @@ das direkt auf einen "checked" .nav-toggle folgt.
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 /* ==== my-achievements-Einstellung ==== */
-.book, .game, .website {
+.book,
+.game,
+.website {
   padding-bottom: 3rem;
 }
 .book figure,
@@ -515,14 +535,15 @@ footer img {
     font-size: var(--fs-p);
     text-align: left;
     font-weight: normal;
-    color: #5b5555;
+    color: var(--txt-global);
   }
   /* Paddings und Margins für Sections */
   .my-journey,
   .title-about-me,
   .my-achievements,
   .about-me,
-  .contact-container, .hero-content {
+  .contact-container,
+  .hero-content {
     padding: 0 var(--base-padding);
   }
   /* === Header Einstellung === */
@@ -654,6 +675,9 @@ footer img {
   .bild-about-me {
     display: block;
   }
+  .title-about-me {
+    padding-top: var(--mt);
+  }
   /* ==== my-journey-Einstellung ==== */
   /* Container für die Pics in my-Journey Section*/
   .jo-pics {
@@ -703,6 +727,9 @@ footer img {
     width: 100%;
   }
   /* ==== about-me-Einstellung ==== */
+  .hero-about__content {
+    padding-top: 0;
+  }
   .skill_title {
     padding-bottom: 1rem;
   }
@@ -713,6 +740,14 @@ footer img {
   .innenbalkon {
     background-color: var(--nav-color);
     height: inherit;
+  }
+  .skills-nummer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .skill-nummer {
+    font-size: var(--fs-m-p);
   }
   /* Containers für Flex 
     .Skill-container fuer "Education & Experience" 
@@ -763,7 +798,7 @@ footer img {
   }
   .book-title-container,
   .game-title-container,
-  .webseite-title-container,   
+  .webseite-title-container,
   .book-container,
   .webseite-container {
     width: 45%;
@@ -921,14 +956,14 @@ footer img {
   /* Fade In Up Animation fuer Jo-pics */
   @keyframes fadeInUp {
     0% {
-      transform: translate3d(0, 100%, 0);
       opacity: 0;
+      transform: translate3d(0, 100%, 0);
       transform: translate3d(0, 100%, 0);
     }
     100% {
-      transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
       opacity: 1;
+      transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
     }
   }
   /* Pulse Animation fuer Buttons */
