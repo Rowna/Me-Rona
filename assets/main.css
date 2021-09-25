@@ -2,8 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,800;1,200;1,300;1,400;1,600;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
 
-/* Globale CSS Variablen
-   Unterstuetzen das DRY-Prinzip
+/* 
+  Globale CSS Variablen
+  Unterstuetzen das DRY-Prinzip
 */
 :root {
   /* Background fuer den Desktop */
@@ -37,6 +38,7 @@
   /* ======= Paddings & Margins Werte ====== */
   /* ======= .25rem = 4px, .5rem = 8px, .75rem = 12px etc. ====== */
   --base-padding: 23rem;
+  --base-m-padding: 2rem; /* padding fuer Mobile*/
   --pl: 1.8em;
   --pb: 1.2em;
   --mt: 6rem;
@@ -229,8 +231,7 @@ das direkt auf einen "checked" .nav-toggle folgt.
 .about-me,
 .my-achievements,
 .contact-container {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 0 var(--base-m-padding);
 }
 .hero-content h2,
 .hero-journey__content h1,
@@ -241,7 +242,7 @@ das direkt auf einen "checked" .nav-toggle folgt.
 .jo-pics,
 .achiev-containers,
 .hero-about__content {
-  padding-top: var(--pb);
+  padding-top: 3rem;
 }
 
 /* Alle Figcaption im Projekt für MV & DV */
@@ -359,12 +360,8 @@ das direkt auf einen "checked" .nav-toggle folgt.
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 /* ==== my-achievements-Einstellung ==== */
-.last-achiev {
+.book, .game, .website {
   padding-bottom: 3rem;
-}
-.game-title,
-.website-title {
-  margin-top: 4rem;
 }
 .book figure,
 .game figure,
@@ -374,6 +371,9 @@ das direkt auf einen "checked" .nav-toggle folgt.
 }
 .level-2 {
   margin-top: 2rem;
+}
+.last-achiev {
+  padding-bottom: 3rem;
 }
 /* === Contact-Me fuer Mobile-Version === */
 .contact-container {
@@ -404,8 +404,9 @@ das direkt auf einen "checked" .nav-toggle folgt.
   padding: 0 8px;
 }
 .form-container {
+  padding: 10px 3px;
   border: solid 1px #ccc;
-  height: 630px;
+  height: 600px;
   margin: 3rem 0;
   background: rgb(255, 255, 255);
   border-radius: 5px;
@@ -437,6 +438,13 @@ textarea {
   font-weight: bold;
   color: #d1f0eb;
   background: var(--nav-color);
+  font-size: 1.3rem;
+}
+form textarea {
+  resize: none;
+  display: block;
+  width: 100%;
+  overflow: scroll;
 }
 /* Footer für Mobile-Version*/
 footer {
@@ -473,14 +481,15 @@ footer img {
   vertical-align: text-bottom;
   color: var(--nav-color);
 }
-/* Footer Brand fuer Desktop '2021 Rowan kharnoub' 
-    in Mobile-Version nicht anzeigen 
+/* 
+  Footer Brand fuer Desktop '2021 Rowan kharnoub' 
+  in Mobile-Version nicht anzeigen 
 */
 .footer-brand_a {
   display: none;
 }
 
-/* @media (min-width:641px) { / portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones / } */
+/* @media (min-width:641px) { / Desktop, portrait iPad, landscape 800x480 or 854x480 phones / } */
 @media screen and (min-width: 1025px) {
   main {
     padding-right: 0;
@@ -512,9 +521,9 @@ footer img {
   .my-journey,
   .title-about-me,
   .my-achievements,
-  .about-me {
-    padding-left: var(--base-padding);
-    padding-right: var(--base-padding);
+  .about-me,
+  .contact-container, .hero-content {
+    padding: 0 var(--base-padding);
   }
   /* === Header Einstellung === */
   header {
@@ -546,8 +555,8 @@ footer img {
   }
   nav {
     display: flex;
+    /*  flex-grow, flex-shrink and flex-basis */
     flex: 0 3 0;
-    /* padding-left: var(--base-padding); */
     position: relative;
     transition: none;
     transform: scale(1, 1);
@@ -599,8 +608,6 @@ footer img {
   }
   .hero-content {
     width: 63%;
-    padding-left: var(--base-padding);
-    padding-right: var(--base-padding);
   }
   .hero-content p {
     width: 90%;
@@ -750,17 +757,15 @@ footer img {
     margin-bottom: 0;
     margin-top: 0;
   }
-  .book-container,
-  .webseite-container {
-    width: 45%;
-  }
   .game-container {
     order: 5;
     width: 45%;
   }
   .book-title-container,
   .game-title-container,
-  .webseite-title-container {
+  .webseite-title-container,   
+  .book-container,
+  .webseite-container {
     width: 45%;
   }
   /* === Contact-Me fuer Mobile-Version === */
@@ -770,30 +775,11 @@ footer img {
     display: flex;
     justify-content: space-between;
     margin: 0;
-    height: 100vh;
-    padding-top: var(--mt);
-    padding-right: var(--base-padding);
-    padding-left: var(--base-padding);
+    height: auto;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
     background: #d1f0eb;
     align-items: center;
-  }
-  /* .get-me fuer linke Spalte 
-     .send-me fuer rechte Spalte
-  */
-  .get-me {
-    width: 45%;
-  }
-  .info-me h2 {
-    color: #000c41;
-    font-size: var(--fs-h3);
-    font-family: var(--ff-p);
-    line-height: 1.3em;
-    font-weight: 600;
-    padding: 0;
-  }
-  .send-me {
-    width: 45%;
-    padding-left: 1rem;
   }
   .form-container {
     font-family: var(--ff-p);
@@ -807,6 +793,29 @@ footer img {
   }
   form {
     margin: 1rem;
+  }
+  /* 
+    .get-me fuer linke Spalte 
+    .send-me fuer rechte Spalte
+  */
+  .get-me {
+    width: 45%;
+  }
+  .send-me {
+    width: 50%;
+    padding-left: 0.8rem;
+  }
+  .info-me h2 {
+    color: #000c41;
+    font-size: var(--fs-h3);
+    font-family: var(--ff-p);
+    line-height: 1.3em;
+    font-weight: 600;
+    padding: 0;
+  }
+  .info-me p {
+    padding: 0;
+    font-size: var(--fs-h1);
   }
   .send-message {
     width: inherit;
@@ -825,14 +834,14 @@ footer img {
   }
   .send-btn {
     width: 100%;
-    margin-bottom: 1rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
     padding: 10px;
     border-radius: 5px;
     border: 0;
     box-shadow: 0px 2px 44px 0px rgba(0, 0, 0, 0.2);
     color: #d1f0eb;
     background: var(--nav-color);
+    font-size: var(--fs-p);
   }
   form textarea {
     height: 8rem;
