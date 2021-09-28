@@ -556,6 +556,7 @@ footer img {
     align-items: center;
     padding-left: var(--base-padding);
     padding-right: var(--base-padding);
+    box-shadow: 0px 2px 44px 0px rgba(0, 0, 0, 0.2);
   }
   .nav-toggle-label {
     display: none;
@@ -628,7 +629,9 @@ footer img {
     background-repeat: no-repeat;
   }
   .hero-content {
-    width: 63%;
+    max-width: 63%;
+    display: block;
+    /* flex-direction: column; */
   }
   .hero-content p {
     width: 90%;
@@ -786,6 +789,7 @@ footer img {
     align-items: center;
     row-gap: 50px;
     padding: 3rem 0;
+    cursor: pointer;
   }
   .book h5,
   .game h5 {
@@ -926,7 +930,10 @@ footer img {
   /* Animation fuer die Buttons */
   .linked-btn:hover,
   .send-btn:hover,
-  .say-hi:hover {
+  .say-hi:hover,
+  .game img:hover,
+  .book img:hover,
+  .website img:hover {
     animation-name: pulse;
     animation-duration: 0.8s;
   }
@@ -981,4 +988,11 @@ footer img {
       transform: scale3d(1, 1, 1);
     }
   }
+
+  /* media screen and (min-width: 1025px) */
+  /* @media screen and (max-width: 1800px) { */
+  /* .hero-content { */
+
+  /* } */
+  /* } */
 }
