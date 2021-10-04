@@ -730,6 +730,7 @@ footer img {
     width: 100%;
   }
   /* ==== about-me-Einstellung ==== */
+  
   .hero-about__content {
     padding-top: 0;
   }
@@ -738,12 +739,53 @@ footer img {
   }
   .aussenbalkon {
     background-color: #c4c4c4;
-    height: 0.8rem;
+    height: 0.6rem;
+    position: relative;
   }
-  .innenbalkon {
+  .aussenbalkon::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--nav-color);
+    z-index: var(--z-modal);
+  }
+  .innen-one::after {
+    transform: scaleX(0.91);
+    transform-origin: left;
+  }
+  .innen-two::after {
+    transform: scaleX(0.66);
+    transform-origin: left;
+  }
+  .innen-three::after {
+    transform: scaleX(0.50);
+    transform-origin: left;
+  }
+  .innen-four::after {
+    transform: scaleX(0.53);
+    transform-origin: left;
+  }
+  .innen-five::after {
+    transform: scaleX(0.65);
+    transform-origin: left;
+  }
+  .innen-six::after {
+    transform: scaleX(0.41);
+    transform-origin: left;
+  }
+  .innen-seven::after {
+    transform: scaleX(0.74);
+    transform-origin: left;
+  }
+  .innen-eight::after {
+    transform: scaleX(0.95);
+    transform-origin: left;
+  }
+  /* .innenbalkon {
     background-color: var(--nav-color);
     height: inherit;
-  }
+  } */
   .skills-nummer {
     display: flex;
     justify-content: space-between;
