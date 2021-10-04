@@ -730,7 +730,6 @@ footer img {
     width: 100%;
   }
   /* ==== about-me-Einstellung ==== */
-  
   .hero-about__content {
     padding-top: 0;
   }
@@ -782,10 +781,6 @@ footer img {
     transform: scaleX(0.95);
     transform-origin: left;
   }
-  /* .innenbalkon {
-    background-color: var(--nav-color);
-    height: inherit;
-  } */
   .skills-nummer {
     display: flex;
     justify-content: space-between;
@@ -803,8 +798,8 @@ footer img {
     display: flex;
     justify-content: space-between;
   }
+  /* .btn-container, */
   .skill-container,
-  .btn-container,
   .who-skill__container {
     margin-top: var(--mt);
   }
@@ -820,6 +815,22 @@ footer img {
   .skill-exper-container {
     width: 50%;
     flex-basis: 45%;
+  }
+  .exper-container {
+    max-width: 600px;
+    /* border: 2px solid; */
+    margin: 0;
+    padding: 0;
+  }
+  .sty-exper {
+    background: white;
+    padding-bottom: 2em;
+  }
+  .btn-container {
+    position: sticky;
+    bottom: 100px;
+    padding: .5em;
+    z-index: -2;
   }
   /* ==== my-achievements-Einstellung ==== */
   .book,
