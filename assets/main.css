@@ -546,6 +546,11 @@ footer img {
   .hero-content {
     padding: 0 var(--base-padding);
   }
+
+  /* .main-body {
+    padding: 0 var(--base-padding);
+  } */
+
   /* === Header Einstellung === */
   header {
     overflow: hidden;
@@ -683,6 +688,9 @@ footer img {
   }
   /* ==== my-journey-Einstellung ==== */
   /* Container für die Pics in my-Journey Section*/
+  .pic-info {
+    cursor: pointer;
+  }
   .jo-pics {
     display: flex;
     justify-content: space-between;
@@ -698,13 +706,13 @@ footer img {
   .txt-journey-container,
   .pic-journey-container {
     overflow: auto;
-    width: 45%;
+    max-width: 45%;
   }
   .pic-journey-container p {
-    width: 100%;
+    max-width: 100%;
   }
   .jo-map {
-    width: 60%;
+    max-width: 60%;
   }
   /* Animation fuer Images in my-journey*/
   .jo-pics img {
