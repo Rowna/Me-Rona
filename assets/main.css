@@ -238,7 +238,7 @@ das direkt auf einen "checked" .nav-toggle folgt.
 .contact-container {
   padding: 0 var(--base-m-padding);
 }
-.hero-content h2,
+
 .hero-journey__content h1,
 .title-about-me,
 .hero-achievement__content h1 {
@@ -275,9 +275,7 @@ das direkt auf einen "checked" .nav-toggle folgt.
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
 }
 /* ==== me-hero-Einstellung ==== */
-.hero-content {
-  width: 100%;
-}
+
 /* Main-pic in der Mobile-Version nicht anzeigen */
 .main-pic-desktop {
   display: none;
@@ -626,28 +624,37 @@ footer img {
   .me-hero {
     padding: 0;
     margin: 0;
-    padding-top: 4rem;
-    height: 670px;
+    padding-top: 15rem;
+    min-height: 700px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
       url("../images/eutin.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   }
   .hero-content {
-    max-width: 63%;
-    display: block;
+    display: grid;
+    place-content: center;
+    text-align: left;
+    max-width: 65%;
+    /* margin: 0; */
+    /* display: block; */
     /* flex-direction: column; */
   }
+  /* .hero-created {
+    margin: 0;
+    padding: 0;
+  } */
   .hero-content p {
     width: 90%;
     color: rgb(219, 217, 203);
-    --fs-p: 1rem;
-    margin: 0;
-    padding: 0;
     font-family: var(--ff-title);
     font-weight: 600;
+    --fs-p: 1rem;
+    /* margin: 0; */
+    /* padding: 0; */
   }
   .hero-content h2 {
+    margin: 0;
     width: auto;
     font-family: "Fugaz One";
     --fs-h2: 270%;
@@ -737,6 +744,93 @@ footer img {
     flex-wrap: wrap;
     width: 100%;
   }
+  /* ===== Gallery-Section ===== */
+  .gallery-container {
+    background-image: url("../images/me-gallery.jpg");
+    background-size: 100%;
+    width: 100%;
+    min-height: 700px;
+    background-repeat: no-repeat;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    position: relative;
+    /* outline: 20px solid rgb(29, 199, 13); */
+  }
+  .galley-content {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    padding-top: 20rem;
+  }
+  .galley-content h1 {
+    position: relative;
+    letter-spacing: 5px;
+    color: rgb(90, 90, 90);
+  }
+  .galley-content h1::before,
+  .galley-content h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .galley-content h1::before {
+    background: white;
+    /* animation-iteration-count: 5; */
+    animation: typewriter 4s steps(20) 1s forwards;
+  }
+  .galley-content h1::after {
+    /* animation-iteration-count: 5; */
+    width: 0.1em;
+    background: rgb(90, 90, 90);;
+    animation: typewriter 4s steps(20) 1s forwards,
+      blink 750ms steps(20) infinite;
+  }
+
+  @keyframes typewriter {
+    to {
+      left: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    to {
+      background: transparent;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+  .me-hero-btn-container {
+    min-width: 50%;
+    /* min-height: 20%; */
+    /* text-align: center; */
+    position: absolute;
+    padding: 2rem 0;
+    bottom: -4rem;
+    left: 25%;
+    border: solid 15px white;
+    background-color: var(--nav-color);
+    color: white;
+    margin: 0 auto;
+    font-size: var(--fs-h3);
+  }
+  .gallery-hero__btn {
+    display: block;
+    text-align: center;
+  }
+  /* .gallery-content {
+    margin-top: 8rem;
+  } */
+
   /* ==== about-me-Einstellung ==== */
   .hero-about__content {
     padding-top: 0;
@@ -766,7 +860,7 @@ footer img {
     transform-origin: left;
   }
   .innen-three::after {
-    transform: scaleX(0.50);
+    transform: scaleX(0.5);
     transform-origin: left;
   }
   .innen-four::after {
@@ -837,7 +931,7 @@ footer img {
   .btn-container {
     position: sticky;
     bottom: 100px;
-    padding: .5em;
+    padding: 0.5em;
     z-index: -2;
   }
   /* ==== my-achievements-Einstellung ==== */
