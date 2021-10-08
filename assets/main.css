@@ -755,7 +755,7 @@ footer img {
   }
   /* ===== Gallery-Section ===== */
   .gallery-container {
-    background-image: url("../images/me-gallery.jpg");
+    /* background-image: url("../images/me-gallery.jpg"); */
     background-size: 100%;
     width: 100%;
     min-height: 700px;
@@ -832,9 +832,21 @@ footer img {
     flex-direction: row;
     width: min(90%, 70.5rem);
   }
-  /* .gallery-left > *, .gallery-right > * {
-    flex-basis: 100%;
-  } */
+
+  .gallery-left > figure {
+    order: 0;
+  }
+
+  .gallery-left > .gallery-txt {
+    order: 1;
+  }
+
+  .gallery-right > figure {
+    order: 1;
+  }
+  .gallery-right > .gallery-txt {
+    order: 0;
+  }
 
   .gallery-left {
     background-color: rgb(44, 43, 43);

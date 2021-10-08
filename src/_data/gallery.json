@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "src": "with-boat.jpeg",
+        "alt": "am boot",
+        "text": "I was waiting for the journey with the boat"
+    },
+    {
+        "id": "2",
+        "src": "strand.jpeg",
+        "alt": "am strand",
+        "text": "we were on the beach on the turkish side"
+    }, 
+    {
+        "id": "3",
+        "src": "strand.jpeg",
+        "alt": "am strand",
+        "text": "we were on the beach on the turkish side"
+    }
+]

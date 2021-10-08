@@ -18,20 +18,31 @@ layout: "base.njk"
             <p class="txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio quo, vitae ipsum laudantium doloribus cupiditate obcaecati! Iste explicabo error animi magnam sed placeat dicta. Maxime?</p>
         </div> #}
     </div>
+    {# lokale Variable: Bild links oder nicht? #}
+    {% set left = true %}
+    {% set elementStyle = "" %}
     <div class="gallery-pic-container">
 
-        <div class="gallery-left">
+    {% for element in gallery %}
+        {% if left %}
+            {% set elementStyle = "gallery-left" %}
+            {% set left = false %}
+        {% else %}
+            {% set elementStyle = "gallery-right" %}
+            {% set left = true %}
+        {% endif %}
+        <div class="{{ elementStyle }}">
             <figure class="gallery-img">
-                <img src="../images/with-boat.jpeg" alt="">
+                <img src="../images/{{ element.src }}" alt="{{ element.alt }}">
             </figure>
             <div class="gallery-txt">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At ducimus assumenda ea tempora dolores aperiam asperiores cupiditate libero, quos ex?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At ducimus assumenda ea tempora dolores aperiam asperiores cupiditate libero, quos ex?
+                    {{ element.text }}
                 </p>
             </div>
         </div>
-
+    {% endfor %}
+<!--
         <div class="gallery-right">
             <div class="gallery-txt">
                 <p>
@@ -40,9 +51,9 @@ layout: "base.njk"
                 </p>
             </div>
             <figure class="gallery-img">
-                <img src="../images/strand.jpeg" alt="">
+                <img src="../images/strand.jpeg" alt="am strand">
             </figure>
         </div>
-
+-->
     </div>
 </div>
