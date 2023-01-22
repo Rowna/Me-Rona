@@ -758,7 +758,7 @@ footer img {
     /* background-image: url("../images/me-gallery.jpg"); */
     background-size: 100%;
     width: 100%;
-    min-height: 700px;
+    min-height: 500px;
     background-repeat: no-repeat;
     margin-top: 4rem;
     margin-bottom: 2rem;
@@ -769,7 +769,7 @@ footer img {
     display: grid;
     place-content: center;
     text-align: center;
-    padding-top: 20rem;
+    padding-top: 5rem;
   }
   .galley-content h1 {
     position: relative;
@@ -803,13 +803,11 @@ footer img {
       left: 100%;
     }
   }
-  
   @keyframes blink {
     to {
       background: transparent;
     }
   }
-  
   @keyframes fadeInUp {
     to {
       opacity: 1;
@@ -830,7 +828,7 @@ footer img {
     align-items: center;
     /* margin-inline: auto; */
     flex-direction: row;
-    width: min(90%, 70.5rem);
+    /* width: min(90%, 70.5rem); */
   }
 
   .gallery-left > figure {
