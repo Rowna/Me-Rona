@@ -38,7 +38,8 @@
 
   /* ======= Paddings & Margins Werte ====== */
   /* ======= .25rem = 4px, .5rem = 8px, .75rem = 12px etc. ====== */
-  --base-padding: 23rem;
+  --base-padding: 10rem;
+  --base-pad: 3rem;
   --base-m-padding: 2rem; /* padding fuer Mobile*/
   --fs-m-h1: 2.2rem;
   --fs-m-h2: 1.5rem;
@@ -108,28 +109,21 @@ p {
   font-weight: normal;
   color: var(--txt-global);
 }
-
-/* ==== Header-Einstellung ==== */
-header {
-  /* platziert den Header auf den Viewport bezogen */
+/* ----------------------------------------------  */
+.header-container {
   position: fixed;
-  /* positioniert den header links oben im Viewport */
   top: 0;
   left: 0;
-  /* laesst den Header ueber der Seite schweben */
-  z-index: var(--z-fixed);
+  z-index: 2;
   width: 100%;
-  /* macht den Header zum Flex-Container */
   display: flex;
-  /* platziert alle Flex-Elemente am Ende des Containers */
-  justify-content: flex-end;
-  /* richtet die Flex-Elemente vertikal in der Mitte aus */
+  justify-content: space-between;
   align-items: center;
-  padding: 2rem;
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
-  background: var(--background-mobile);
+  padding: 1rem var(--base-padding) 1rem var(--base-padding);
+  background: var(--background);
+  box-shadow: 0px 2px 44px 0px rgba(0, 0, 0, 0.2);
 }
+
 .navbar-brand a {
   flex-basis: 50%;
   letter-spacing: 1px;
@@ -137,6 +131,7 @@ header {
   color: var(--nav-color);
   font-family: var(--ff-title);
 }
+
 /* ========== Mobile-Navigation: =========== */
 nav {
   /* absolut in bezug auf das parent element <header>  */
@@ -233,13 +228,14 @@ das direkt auf einen "checked" .nav-toggle folgt.
 .me-hero,
 .my-journey,
 .title-about-me,
-.about-me,
 .my-achievements,
 .contact-container {
   padding: 0 var(--base-m-padding);
 }
+.about-me {
+  padding: 0 var(--base-padding) !important;
+}
 
-.hero-journey__content h1,
 .title-about-me,
 .hero-achievement__content h1 {
   padding-top: var(--mt);
@@ -310,7 +306,8 @@ das direkt auf einen "checked" .nav-toggle folgt.
 }
 
 /* ==== gallery-Einstellung ==== */
-.gallery-left, .gallery-right {
+.gallery-left,
+.gallery-right {
   padding: 3rem 0;
   margin-inline: auto;
   display: flex;
@@ -548,28 +545,23 @@ footer img {
   .my-journey,
   .title-about-me,
   .my-achievements,
-  .about-me,
   .contact-container,
   .hero-content {
     padding: 0 var(--base-padding);
   }
-
-  /* .main-body {
-    padding: 0 var(--base-padding);
-  } */
-
-  /* === Header Einstellung === */
-  header {
-    overflow: hidden;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background: var(--background);
-    align-items: center;
-    padding-left: var(--base-padding);
-    padding-right: var(--base-padding);
-    box-shadow: 0px 2px 44px 0px rgba(0, 0, 0, 0.2);
+  .hero-content {
+    margin-top: 5rem;
   }
+  .about-me {
+    padding: 0 var(--base-pad);
+  }
+  /* */
+
+  .main-body {
+    /* padding: 0 var(--base-padding); */
+    /* padding-top: 5rem; */
+  }
+
   .nav-toggle-label {
     display: none;
   }
@@ -642,19 +634,17 @@ footer img {
   }
   .hero-content {
     display: grid;
-    place-content: center;
+    justify-content: center;
     text-align: left;
-    max-width: 65%;
-    /* margin: 0; */
-    /* display: block; */
-    /* flex-direction: column; */
-  }
-  /* .hero-created {
     margin: 0;
-    padding: 0;
-  } */
-  .hero-content p {
-    width: 90%;
+  }
+  .hero-created-h2 {
+    max-width: 550px;
+  }
+  .hero-rona-p {
+    max-width: 550px;
+    width: 70%;
+    /* width: 50%; */
     color: rgb(219, 217, 203);
     font-family: var(--ff-title);
     font-weight: 600;
@@ -676,8 +666,8 @@ footer img {
   .say-hi {
     display: inline-block;
     text-decoration: none;
-    margin-top: 3rem;
-    margin-left: 4rem;
+    /* margin-top: 3rem;
+    margin-left: 4rem; */
     width: 60%;
     font-family: var(--ff-p);
     font-weight: 700;
@@ -701,6 +691,12 @@ footer img {
   }
   .title-about-me {
     padding-top: var(--mt);
+  }
+  .navbar-brand {
+    padding-right: 4rem;
+  }
+  .navbar-container {
+    padding-left: 4rem;
   }
   /* ==== my-journey-Einstellung ==== */
   /* Container für die Pics in my-Journey Section*/
@@ -793,7 +789,7 @@ footer img {
   .galley-content h1::after {
     /* animation-iteration-count: 5; */
     width: 0.1em;
-    background: rgb(90, 90, 90);;
+    background: rgb(90, 90, 90);
     animation: typewriter 4s steps(20) 1s forwards,
       blink 750ms steps(20) infinite;
   }
@@ -814,15 +810,16 @@ footer img {
       transform: translateY(0);
     }
   }
-  
-/* 
+
+  /* 
   .gallery-pic-container > * {
     flex-basis: 100%;
   }
   .gallery-left > * + *, .gallery-right  > * + * {
     margin-left: 2em;
   } */
-  .gallery-left, .gallery-right {
+  .gallery-left,
+  .gallery-right {
     display: flex;
     padding: 3rem 0;
     align-items: center;
@@ -852,11 +849,11 @@ footer img {
   .gallery-right {
     background-color: cadetblue;
   }
-  .gallery-right p, .gallery-left p {
+  .gallery-right p,
+  .gallery-left p {
     color: white;
     margin-left: 2em;
   }
-
 
   .me-hero-btn-container {
     min-width: 50%;
